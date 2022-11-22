@@ -6,7 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
+      colors: {
+        purple: "#5602E0",
+        secondary: {
+          50: "#E4E4E4",
+          100: "#9A9A9A",
+        },
+      },
+     fontFamily: {
         'sans' : ['Neufile Grotes','arial'],
         
       },maxWidth: {
@@ -15,4 +22,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
