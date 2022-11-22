@@ -8,8 +8,10 @@ module.exports = {
     extend: {
       colors: {
         purple: "#5602E0",
-        "dark-gray": "#9A9A9A",
-        "light-gray": "#E4E4E4",
+        secondary: {
+          50: "#E4E4E4",
+          100: "#9A9A9A",
+        },
       },
       fontFamily: {
         sans: ["Neufile Grotes", "arial"],
