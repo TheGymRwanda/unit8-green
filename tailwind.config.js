@@ -15,7 +15,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Neufile Grotes", "arial"],
-      },
+      },maxWidth: {
+          '82': '82rem',
+        },
     },
   },
   plugins: [],
