@@ -6,10 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        purple: "#5602E0",
+        "dark-gray": "#9A9A9A",
+        "light-gray": "#E4E4E4",
+      },
       fontFamily: {
-        'sans' : ['Neufile Grotes','arial'],
-      }
+        sans: ["Neufile Grotes", "arial"],
+      },
     },
   },
   plugins: [],
-}
+};
