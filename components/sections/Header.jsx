@@ -1,10 +1,10 @@
-import React from 'react';
+import Wrapper from '../wrappers/Wrapper';
 
 function Header(props) {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <Wrapper styles=''>
+      <h1 className="text-8xl font-medium font-sans">Dacade</h1>
+ </Wrapper>
     );
 }
 
