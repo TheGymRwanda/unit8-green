@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Wrapper(props) {
+function Wrapper({children,styles}) {
     return (
-        <div>
-            wrapper
+        <div className={`max-w-82 px-16 mx-auto ${styles}`} >
+           {children} 
         </div>
     );
 }
