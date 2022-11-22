@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Neufile Grotesk";
+  src: url("../public/assets/fonts/NeufileGrotesk-Regular.eot");
+}
+
