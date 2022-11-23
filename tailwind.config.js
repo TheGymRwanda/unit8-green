@@ -19,16 +19,22 @@ module.exports = {
       maxWidth: {
         82: "82rem",
       },
-      margin:{
+      margin: {
         18: "4.4375rem",
       },
-      padding:{
-        4.5:"1.1219rem"
-      }
+      padding: {
+        4.5: "1.1219rem",
+        5.5: "1.3256rem",
+      },
+      letterSpacing: {
+        thin: "-0.015em",
+        thiner: "-0.0125em",
+      },
+      gap: {
+        13: "3.875rem",
+        81: "20.75rem",
+      },
     },
-    letterSpacing: {
-      thin: '-0.015em',
-    }
   },
   plugins: [],
 };
