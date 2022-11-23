@@ -6,14 +6,14 @@ import arrow from '../../public/assets/images/arrow.svg'
 
 function Button({children, style, link}) {
     return (
-        <Wrapper>
-                <Link href={`${link}`}>
-                   <div className='flex gap-1 items-center group cursor-pointer'>
-                   <span className={`text-2xl font-normal leading-8 tracking-thin font-sans ${style}`}>{children}</span>
-                   <span className='group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1'><Image src={arrow} /></span>
-                   </div>
-                </Link>
-        </Wrapper>  
+        <>
+            <Link href={`${link}`} target="_blank">
+               <div className='flex gap-1 items-center group cursor-pointer'>
+               <span className={`font-normal leading-8 tracking-thiner sm:tracking-thin font-sans ${style}`}>{children}</span>
+               <span className='group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1'><Image src={arrow} /></span>
+               </div>
+            </Link>
+        </>  
     );
 }
 
