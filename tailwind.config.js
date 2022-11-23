@@ -20,6 +20,9 @@ module.exports = {
           '82': '82rem',
         },
     },
+    letterSpacing: {
+      thin: '-0.015em',
+    }
   },
   plugins: [],
 };
