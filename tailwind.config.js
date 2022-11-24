@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        desktop: "90rem",
+        tablet: "64rem",
+        ipad: "52.125rem",
+        mobile: "24.375rem",
+      },
       colors: {
         purple: "#5602E0",
         secondary: {
@@ -13,16 +19,16 @@ module.exports = {
           100: "#9A9A9A",
         },
       },
-     fontFamily: {
-        'sans' : ['Neufile Grotes','arial'],
-        
-      },maxWidth: {
-          '82': '82rem',
-        },
+      fontFamily: {
+        sans: ["Neufile Grotes", "arial"],
+      },
+      maxWidth: {
+        90: "90rem",
+      },
     },
     letterSpacing: {
-      thin: '-0.015em',
-    }
+      thin: "-0.015em",
+    },
   },
   plugins: [],
 };
