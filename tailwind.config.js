@@ -22,6 +22,7 @@ module.exports = {
     },
     letterSpacing: {
       thin: '-0.015em',
+      thiner: '-0.0125em'
     }
   },
   plugins: [],
