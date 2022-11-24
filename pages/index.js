@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/sections/Header";
+import DescriptionSection from "../components/sections/DescriptionSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <div>
   <Header/>
+  <DescriptionSection/>
       </div>
     </div>
   );

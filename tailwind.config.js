@@ -16,10 +16,13 @@ module.exports = {
      fontFamily: {
         'sans' : ['Neufile Grotes','arial'],
         
-      },maxWidth: {
+      },
+      maxWidth: {
           '82': '82rem',
         },
+        
     },
+    
     letterSpacing: {
       thin: '-0.015em',
     }
