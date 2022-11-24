@@ -1,9 +1,6 @@
 import Head from "next/head";
 import Header from "../components/sections/Header";
-<<<<<<< HEAD
 import Footer from "../components/layouts/Footer";
-=======
->>>>>>> 7290780 (feat: adding selection background color)
 import DescriptionSection from "../components/sections/DescriptionSection";
 
 export default function Home() {
