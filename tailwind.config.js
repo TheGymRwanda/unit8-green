@@ -26,6 +26,7 @@ module.exports = {
         90: "90rem",
       },
     },
+    
     letterSpacing: {
       thin: "-0.015em",
       thiner: "-0.0125em",
