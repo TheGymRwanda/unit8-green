@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/sections/Header";
 import Footer from "../components/layouts/Footer";
 import Expertise from '../components/sections/Expertise';
+import DescriptionSection from "../components/sections/DescriptionSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <div>
       <Header/>
       <Expertise />
+      <DescriptionSection/>
       <Footer />
       </div>
     </div>
