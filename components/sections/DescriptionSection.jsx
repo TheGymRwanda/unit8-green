@@ -1,82 +1,73 @@
-import React, { useState, useEffect, useRef } from "react";
-import Wrapper from "../wrappers/Wrapper";
-import Arrow from "../Arrow";
-import Button from "../ui/Button";
+import React, {useState,useEffect, useRef} from 'react';
+import Wrapper from '../wrappers/Wrapper';
+import Arrow from '../Arrow';
+import Button from '../ui/Button';
 
 function DescriptionSection() {
-  const desc = {
-    1: {
-      description:
-        "Bloc about us will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-    2: {
-      description:
-        "Bloc wat we do will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-    3: {
-      description:
-        "Bloc employment will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-  };
-  const [description, setDescription] = useState("1");
-  const [show, setShow] = useState(true);
-  const [animation, setAnimation] = useState(true);
-  const targetRef1 = useRef();
-  const targetRef2 = useRef();
-  const targetRef3 = useRef();
-
-  const [width1, setWidth1] = useState({ width1: 0 });
-  const [width2, setWidth2] = useState({ width2: 0 });
-  const [width3, setWidth3] = useState({ width3: 0 });
-
-  const [left1, setLeft1] = useState({ left1: 0 });
-  const [left2, setLeft2] = useState({ left2: 0 });
-  const [left3, setLeft3] = useState({ left3: 0 });
-
-  useEffect(() => {
-    setShow(true);
-  }, [description]);
-
-  useEffect(() => {
-    setAnimation(true);
-  }, [animation]);
-
-  useEffect(() => {
-    if (targetRef1.current) {
-      setWidth1({ width1: targetRef1.current.clientWidth });
-      setLeft1({ left1: targetRef1.current.offsetLeft });
+    const desc = {
+        '1':{
+        'about':"Bloc about us will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
+        'link':"/link",
+        'end':"Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior."   
+        },
+        '2':{
+        'about':"Bloc wat we do will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
+        'link':"/link",
+        'end':"Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior."   
+        },
+        '3':{
+        'about':"Bloc employment will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale",
+        'link':"/link",
+        'end':"Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior."   
+        }
     }
-  }, []);
-  useEffect(() => {
-    if (targetRef2.current) {
-      setWidth2({ width2: targetRef2.current.clientWidth });
-      setLeft2({ left2: targetRef2.current.offsetLeft });
-    }
-  }, []);
-  useEffect(() => {
-    if (targetRef3.current) {
-      setWidth3({ width3: targetRef3.current.clientWidth });
-      setLeft3({ left3: targetRef3.current.offsetLeft });
-    }
-  }, []);
-  const width =
-    description === "1"
-      ? width1.width1 / 16
-      : description === "2"
-      ? width2.width2 / 16
-      : width3.width3 / 16;
-  const left =
-    description === "1"
-      ? left1.left1 / 16
-      : description === "2"
-      ? left2.left2 / 16
-      : left3.left3 / 16;
+    const [description, setDescription] = useState('1');
+    const [show,setShow] = useState(true);
+    const targetRef1 = useRef();
+    const targetRef2 = useRef();
+    const targetRef3 = useRef();
+  
+    const [width1, setWidth1] = useState({ width1: 0 });
+    const [width2, setWidth2] = useState({ width2: 0 });
+    const [width3, setWidth3] = useState({ width3: 0 });
+  
+    const [left1, setLeft1] = useState({ left1: 0 });
+    const [left2, setLeft2] = useState({ left2: 0 });
+    const [left3, setLeft3] = useState({ left3: 0 });
+  
+    useEffect(()=>{
+     setShow(true)
+    },[description])
+    useEffect(() => {
+        if (targetRef1.current) {
+          setWidth1({ width1: targetRef1.current.clientWidth });
+          setLeft1({ left1: targetRef1.current.offsetLeft });
+        }
+      }, []);
+      useEffect(() => {
+        if (targetRef2.current) {
+          setWidth2({ width2: targetRef2.current.clientWidth });
+          setLeft2({ left2: targetRef2.current.offsetLeft });
+        }
+      }, []);
+      useEffect(() => {
+        if (targetRef3.current) {
+          setWidth3({ width3: targetRef3.current.clientWidth });
+          setLeft3({ left3: targetRef3.current.offsetLeft });
+        }
+      }, []);
+      const width =
+      description === "1"
+        ? width1.width1 / 16
+        : description === "2"
+        ? width2.width2 / 16
+        : width3.width3 / 16;
+    const left =
+      description === "1"
+        ? left1.left1 / 16
+        : description === "2"
+        ? left2.left2 / 16
+        : left3.left3 / 16;
   return (
     <Wrapper styles="font-normal text-2xl my-8">
       <>
