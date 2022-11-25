@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 function Header() {
   return (
     <Wrapper>
-      <div className="grid mt-12 tablet:grid-cols-[250px_minmax(0,_1fr)] desktop:grid-cols-3">
+      <div className="grid mt-12 tablet:grid-cols-15 desktop:grid-cols-3 ">
         <h1 className="text-xl ipad:text-2xl  desktop:col-span-1 mobile:pb-4.5 leading-7 ipad:leading-8 tracking-thiner ipad:tracking-thin font-normal">
           Ape Unit
         </h1>

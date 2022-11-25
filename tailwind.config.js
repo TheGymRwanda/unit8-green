@@ -40,6 +40,9 @@ module.exports = {
         13: "3.875rem",
         81: "20.75rem",
       },
+      gridTemplateColumns: {
+        15: "[15.625rem_minmax(0,_1fr)]",
+      },
     },
   },
   plugins: [],
