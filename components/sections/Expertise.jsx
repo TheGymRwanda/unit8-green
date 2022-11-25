@@ -12,26 +12,26 @@ function Expertise(props) {
             <h3 className='text-secondary-100 text-xl md:text-2xl leading-8 tracking-thin self-start'>Expertise</h3>
             <div className='flex  flex-col ipad:flex-row gap-x-6 self-end'>
                 <div className='flex flex-col gap-y-3'>
-                    {
-                        tagOne.map((tag, i) => {
-                            return (
-                                <ul className='border-b border-secondary-50 w-80'>
-                                    <li key={i} className ="text-xl ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
-                                </ul>
-                            )
-                        })
-                    }
+                    <ul className='border-b border-secondary-50 w-80'>
+                        {
+                            tagOne.map((tag, i) => {
+                                return (
+                                        <li key={i} className ="text-xl ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
                 <div className='flex flex-col gap-y-3'>
-                    {
-                        tagTwo.map((tag, i) => {
-                           return (
-                               <ul className='border-b border-50 w-80'>
-                                   <li key={i} className ="text-xl ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
-                               </ul>
-                           )
-                         })
-                    }
+                    <ul className='border-b border-50 w-80'>
+                        {
+                            tagTwo.map((tag, i) => {
+                               return (
+                                <li key={i} className ="text-xl ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
+                               )
+                             })
+                        }
+                    </ul>
                 </div>
             </div>
             </div>  
