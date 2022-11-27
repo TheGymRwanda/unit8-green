@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import React from 'react';
-import Image from 'next/image';
-import Wrapper from '../wrappers/Wrapper';
-import arrow from '../../public/assets/images/arrow.svg'
+import Link from "next/link";
+import React from "react";
+import Image from "next/image";
+import Wrapper from "../wrappers/Wrapper";
+import arrow from "../../public/assets/images/arrow.svg";
 
 function Button({children, style, link}) {
     return (
