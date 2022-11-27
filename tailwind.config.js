@@ -6,6 +6,32 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        dropdown: "dropdown 0.3s ease 0s 1 normal forwards",
+        dropup: "dropup 0.3s ease 0s 1 normal forwards",
+      },
+      keyframes: {
+        dropdown: {
+          "0%": { transform: "translateY(-0.1px))" },
+          "100%": {
+            position: "relative",
+            transform: "translateY(0px)",
+          },
+        },
+        dropup: {
+          "0%": {
+            position: "relative",
+            transform: "translateY(0px)",
+          },
+          "100%": { transform: "translateY(-0.1px))" },
+        },
+      },
+      screens: {
+        desktop: "90rem",
+        tablet: "64rem",
+        ipad: "52.125rem",
+        mobile: "24.375rem",
+      },
       colors: {
         purple: "#5602E0",
         secondary: {
@@ -13,20 +39,16 @@ module.exports = {
           100: "#9A9A9A",
         },
       },
-     fontFamily: {
-        'sans' : ['Neufile Grotes','arial'],
-        
+      fontFamily: {
+        sans: ["Neufile Grotes", "arial"],
       },
       maxWidth: {
-          '82': '82rem',
-        },
-        
+        90: "90rem",
+      },
     },
-    
     letterSpacing: {
-      thin: '-0.015em',
-      thiner: '-0.0125em'
-    }
+      thin: "-0.015em",
+    },
   },
   plugins: [],
 };
