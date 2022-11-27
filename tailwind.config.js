@@ -6,6 +6,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        dropdown: "dropdown 0.3s ease 0s 1 normal forwards",
+        dropup: "dropup 0.3s ease 0s 1 normal forwards",
+      },
+      keyframes: {
+        dropdown: {
+          "0%": { transform: "translateY(-0.1px))" },
+          "100%": {
+            position: "relative",
+            transform: "translateY(0px)",
+          },
+        },
+        dropup: {
+          "0%": {
+            position: "relative",
+            transform: "translateY(0px)",
+          },
+          "100%": { transform: "translateY(-0.1px))" },
+        },
+      },
       screens: {
         desktop: "90rem",
         tablet: "64rem",
