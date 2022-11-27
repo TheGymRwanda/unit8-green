@@ -29,8 +29,8 @@ module.exports = {
         },
       },
       screens: {
-        desktop: "90rem",
-        tablet: "64rem",
+        desktop: "1440px",
+        tablet: "1024px",
         ipad: "52.125rem",
         mobile: "24.375rem",
       },
