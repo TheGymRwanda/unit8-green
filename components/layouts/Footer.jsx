@@ -6,7 +6,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <Wrapper>
-      <div className="flex flex-col sm:flex-row justify-between gap-y-12 sm:gap-y-0 text-xl md:text-2xl font-normal leading-8 tracking-thiner md:tracking-thin">
+      <div className="flex flex-col ipad:flex-row justify-between gap-y-12 ipad:gap-y-0 text-xl ipad:text-2xl font-normal leading-8 tracking-thiner ipad:tracking-thin ipad:pb-12 pb-5 tablet:pb-14 desktop:pb-12">
         <p className="flex flex-col">
           <span>Ape Unit GmbH</span>
           <span className="w-56">Waldemarstraße 38, 10999 Berlin </span>
