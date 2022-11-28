@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import React, {useState,useEffect, useRef} from 'react';
 import Wrapper from '../wrappers/Wrapper';
 import Arrow from '../Arrow';
 import Button from '../ui/Button';
-=======
-import React, {useState,useEffect, useRef, useLayoutEffect} from 'react';
-import Wrapper from '../wrappers/Wrapper';
-import Arrow from '../Arrow';
-
-
->>>>>>> 7290780 (feat: adding selection background color)
 
 function DescriptionSection() {
     const desc = {
@@ -46,31 +38,19 @@ function DescriptionSection() {
     useEffect(()=>{
      setShow(true)
     },[description])
-<<<<<<< HEAD
     useEffect(() => {
-=======
-    useLayoutEffect(() => {
->>>>>>> 7290780 (feat: adding selection background color)
         if (targetRef1.current) {
           setWidth1({ width1: targetRef1.current.clientWidth });
           setLeft1({ left1: targetRef1.current.offsetLeft });
         }
       }, []);
-<<<<<<< HEAD
       useEffect(() => {
-=======
-      useLayoutEffect(() => {
->>>>>>> 7290780 (feat: adding selection background color)
         if (targetRef2.current) {
           setWidth2({ width2: targetRef2.current.clientWidth });
           setLeft2({ left2: targetRef2.current.offsetLeft });
         }
       }, []);
-<<<<<<< HEAD
       useEffect(() => {
-=======
-      useLayoutEffect(() => {
->>>>>>> 7290780 (feat: adding selection background color)
         if (targetRef3.current) {
           setWidth3({ width3: targetRef3.current.clientWidth });
           setLeft3({ left3: targetRef3.current.offsetLeft });
@@ -82,10 +62,6 @@ function DescriptionSection() {
         : description === "2"
         ? width2.width2 / 16
         : width3.width3 / 16;
-<<<<<<< HEAD
-=======
-    console.log(width);
->>>>>>> 7290780 (feat: adding selection background color)
     const left =
       description === "1"
         ? left1.left1 / 16
