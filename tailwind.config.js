@@ -6,12 +6,37 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        show: "show 4s ease 0.5s 1 normal forwards",
+        underlay: "underlay 1s ease 0s 1 normal forwards",
+      },
+      keyframes: {
+        show: {
+          "0%": { opacity: "0" },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        underlay: {
+          "0% ": {
+            transform: "translateX(0)",
+          },
+
+          "100%": {
+            transform: "translateX(6.25rem)",
+          },
+        },
+      },
+      boxShadow: {
+        pictures: "-0.625rem -0.0313rem 5.625rem 0.4375rem rgba(0, 0, 0, 0.12)",
+      },
       screens: {
-        desktop: "1440px",
-        tablet: "1024px",
+        desktop: "90rem",
+        tablet: "64rem",
         ipad: "52.125rem",
         mobile: "24.375rem",
       },
+
       colors: {
         purple: "#5602E0",
         secondary: {
