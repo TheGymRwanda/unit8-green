@@ -25,10 +25,24 @@ module.exports = {
       maxWidth: {
         90: "90rem",
       },
-    },
-    letterSpacing: {
-      thin: "-0.015em",
-      thiner: "-0.0125em",
+      margin: {
+        18: "4.4375rem",
+      },
+      padding: {
+        4.5: "1.1219rem",
+        5.5: "1.3256rem",
+      },
+      letterSpacing: {
+        thin: "-0.015rem",
+        thiner: "-0.0125rem",
+      },
+      gap: {
+        13: "3.875rem",
+        81: "20.75rem",
+      },
+      gridTemplateColumns: {
+        'k': '15.625rem_minmax(0,_1fr)',
+      },
     },
   },
   plugins: [],

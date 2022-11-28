@@ -15,7 +15,7 @@ function Button({ children, style, link }) {
             {children}
           </span>
           <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
-            <Image src={arrow} />
+            <Image src={arrow} alt="arrow" />
           </span>
         </div>
       </Link>
