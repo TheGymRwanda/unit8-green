@@ -43,6 +43,9 @@ module.exports = {
       gridTemplateColumns: {
         'k': '15.625rem_minmax(0,_1fr)',
       },
+      width: {
+        '78': '19.375rem',
+      }
     },
   },
   plugins: [],

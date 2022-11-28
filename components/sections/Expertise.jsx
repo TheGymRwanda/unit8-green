@@ -15,7 +15,7 @@ function Expertise(props) {
                     {
                         tagOne.map((tag, i) => {
                             return (
-                                    <li key={i} className ="border-b border-secondary-50 leading-8 w-80 text-xl font-normal ipad:text-2xl tracking-thiner ipad:tracking-thin">{tag}</li>
+                                    <li key={i} className ="border-b border-secondary-50 leading-8 w-78 text-xl font-normal ipad:text-2xl tracking-thiner ipad:tracking-thin">{tag}</li>
                             )
                         })
                     }
@@ -24,7 +24,7 @@ function Expertise(props) {
                     {
                         tagTwo.map((tag, i) => {
                            return (
-                            <li key={i} className ="border-b border-secondary-50 w-80 text-xl leading-8 ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
+                            <li key={i} className ="border-b border-secondary-50 w-78 text-xl leading-8 ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
                            )
                          })
                     }
