@@ -29,11 +29,12 @@ module.exports = {
         },
       },
       screens: {
-        desktop: "1440px",
-        tablet: "1024px",
+        desktop: "90rem",
+        tablet: "64rem",
         ipad: "52.125rem",
         mobile: "24.375rem",
       },
+
       colors: {
         purple: "#5602E0",
         secondary: {
