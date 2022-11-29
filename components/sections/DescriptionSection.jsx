@@ -71,12 +71,18 @@ function DescriptionSection() {
           <div className="my-6 relative ">
             <div>
               {desc[description].description}
-              <span className="block tablet:inline-block">
-                <Button style="underline hover:no-underline hover:duration-300 ease-in-out inline-block">
+              <span className="tablet:inline-block desktop:collapse">
+                <Button style="underline hover:no-underline hover:duration-300 ease-in-out">
                   Learn more
                 </Button>
               </span>
             </div>
+            <div className="hidden desktop:block">
+              <Button style=" underline hover:no-underline hover:duration-300 ease-in-out">
+                Learn more
+              </Button>
+            </div>
+
             <p className="my-6">{desc[description].end}</p>
           </div>
         </div>
@@ -109,28 +115,14 @@ function DescriptionSection() {
             </button>
             {description === i && show && (
               <div className={`overflow-hidden pt-3`}>
-                <p
-                  className={` ${
-                    description === i && show
-                      ? ' animate-dropdown'
-                      : ' animate-dropup'
-                  }`}
-                >
+                <p className={` animate-dropdown`}>
                   {item.description}
                   <span className="inline-block">
                     <button>Learn more</button>
                   </span>
                 </p>
 
-                <p
-                  className={`animate-dropdown pt-5 ${
-                    description === i && show
-                      ? ' animate-dropdown'
-                      : ' animate-dropup'
-                  }`}
-                >
-                  {item.end}
-                </p>
+                <p className={`animate-dropdown pt-5`}>{item.end}</p>
               </div>
             )}
           </div>

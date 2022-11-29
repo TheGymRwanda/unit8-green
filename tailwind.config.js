@@ -8,7 +8,6 @@ module.exports = {
     extend: {
       animation: {
         dropdown: 'dropdown 0.3s ease 0s 1 normal forwards',
-        dropup: 'dropup 0.3s ease 0s ',
       },
       keyframes: {
         dropdown: {
@@ -17,12 +16,6 @@ module.exports = {
             position: 'relative',
             transform: 'translateY(0px)',
           },
-        },
-        dropup: {
-          '0%': {
-            transform: 'translateY(0px)',
-          },
-          '100%': {transform: 'translateY(-100px)'},
         },
       },
       screens: {
