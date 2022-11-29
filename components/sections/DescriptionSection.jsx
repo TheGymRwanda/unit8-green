@@ -71,14 +71,14 @@ function DescriptionSection() {
           </div>
           <div className="my-6">
             <p>{desc[description].description}</p>
-            <Button style="underline hover:no-underline hover:duration-300 ease-in-out">
+            <Button style="underline group-hover:no-underline group-hover:duration-300 ease-in-out">
               Learn more
             </Button>
             <p className="my-6">{desc[description].end}</p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col ipad:hidden gap-8 justify-start w-full ">
+      <div className="flex flex-col ipad:hidden gap-8 justify-start w-full">
         {desc.map((item, i) => (
           <div key={i} className="">
             <button
