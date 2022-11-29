@@ -6,37 +6,7 @@
   font-family: "Neufile Grotesk";
   src: url("../public/assets/fonts/NeufileGrotesk-Regular.eot");
 }
-body{
-  @apply selection:text-white selection:bg-purple
-}
-.dropdown {
-  animation: dropdown 1s ease 0s 1 normal forwards;
-}
 
-@keyframes dropdown {
-  0% {
-    transform: translateY(-200px);
-  }
-
-  100% {
-    position: relative;
-    ;
-    transform: translateY(0px);
-  }
-}
-
-.dropup {
-  animation: dropup 1s ease 0s 1 normal forwards;
-}
-
-@keyframes dropup {
-  0% {
-    position: relative;
-    transform: translateY(0px);
-  }
-
-  100% {
-
-    transform: translateY(-200px);
-  }
-}
+/* body {
+  @apply selection: bg-purple selection:text-white
+} */
