@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Header from '../components/sections/Header';
-import Footer from '../components/layouts/Footer';
-import Expertise from '../components/sections/Expertise';
-import DescriptionSection from '../components/sections/DescriptionSection';
-import Project from '../components/sections/ProjectSection';
+import Head from "next/head";
+import Header from "../components/sections/Header";
+import Footer from "../components/layouts/Footer";
+import Expertise from "../components/sections/Expertise";
+import DescriptionSection from "../components/sections/DescriptionSection";
+import Project from "../components/sections/ProjectSection";
 
 export default function Home() {
   return (
@@ -19,6 +19,7 @@ export default function Home() {
         <Expertise />
         <DescriptionSection />
         <Footer />
+        <Project />
       </div>
     </div>
   );

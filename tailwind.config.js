@@ -34,6 +34,7 @@ module.exports = {
         ipad: "52.125rem",
         mobile: "24.375rem",
       },
+
       colors: {
         purple: "#5602E0",
         secondary: {
