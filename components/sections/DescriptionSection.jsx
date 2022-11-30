@@ -1,37 +1,37 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {createRef} from 'react';
-import Wrapper from '../wrappers/Wrapper';
-import Arrow from '../Arrow';
-import Button from '../ui/Button';
+import React, { useState, useEffect, useRef } from "react";
+import { createRef } from "react";
+import Wrapper from "../wrappers/Wrapper";
+import Arrow from "../Arrow";
+import Button from "../ui/Button";
 
 function DescriptionSection() {
   const desc = [
     {
-      header: 'About us',
+      header: "About us",
       description:
-        'Bloc about us will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ',
-      link: '/link',
-      end: 'Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.',
+        "Bloc about us will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
+      link: "/link",
+      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
     },
     {
-      header: 'What we do',
+      header: "What we do",
       description:
-        'Bloc wat we do will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ',
-      link: '/link',
-      end: 'Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.',
+        "Bloc wat we do will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
+      link: "/link",
+      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
     },
     {
-      header: 'Employment',
+      header: "Employment",
       description:
-        'Bloc employment will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ',
-      link: '/link',
-      end: 'Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.',
+        "Bloc employment will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
+      link: "/link",
+      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
     },
   ];
   const [description, setDescription] = useState(0);
   const [show, setShow] = useState(true);
   const refs = useRef(new Array());
-  const [position, setPosition] = useState({width: 0, left: 0});
+  const [position, setPosition] = useState({ width: 0, left: 0 });
   useEffect(() => {
     setShow(true);
     setPosition({
@@ -39,6 +39,7 @@ function DescriptionSection() {
       left: refs.current[description]?.offsetLeft / 16,
     });
   }, [description]);
+  console.log(refs.current[description]?.offsetLeft);
 
   return (
     <Wrapper styles="font-normal text-2xl my-8">
@@ -52,8 +53,8 @@ function DescriptionSection() {
                 onClick={() => setDescription(i)}
                 className={`${
                   description === i
-                    ? 'text-purple one'
-                    : 'text-secondary-100 no-underline'
+                    ? "text-purple one"
+                    : "text-secondary-100 no-underline"
                 }`}
                 ref={(element) => (refs.current[i] = element)}
               >
@@ -95,8 +96,8 @@ function DescriptionSection() {
               }}
               className={`${
                 description === i && show
-                  ? ' text-purple border-b border-purple py-1 stroke-purple'
-                  : 'text-black border-b border-black stroke-black'
+                  ? " text-purple border-b border-purple py-1 stroke-purple"
+                  : "text-black border-b border-black stroke-black"
               } flex justify-between  w-full`}
             >
               <span className="whitespace-nowrap font-normal text-2xl">
@@ -105,7 +106,7 @@ function DescriptionSection() {
 
               <div
                 className={`${
-                  description === i && show && 'rotate-180 '
+                  description === i && show && "rotate-180 "
                 } duration-500 ease-in-out`}
               >
                 <Arrow />
