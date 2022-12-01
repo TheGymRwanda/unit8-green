@@ -59,7 +59,7 @@ export default function ProjectSections() {
         Project
       </p>
 
-      <div className="hidden desktop:grid desktop:grid-cols-4 relative">
+      <div className="hidden desktop:grid desktop:grid-cols-4 relative overflow-hidden">
         <ul
           ref={ref}
           className="flex flex-col text-[4.5rem] -space-y-4 cursor-pointer"
@@ -89,7 +89,7 @@ export default function ProjectSections() {
         </ul>
         {link !== 0 ? (
           <>
-            <div className="sticky h-fit top-4 col-span-3 overflow-hidden">
+            <div className="sticky h-fit top-4 col-span-3">
               <Image
                 src={hover[link].src}
                 alt=""
