@@ -3,6 +3,7 @@ import Wrapper from "../wrappers/Wrapper";
 
 function Expertise(props) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const tagOne = ["Product Development", "Community management", "Governance", "Product Development", "Product Development"]
     const tagTwo = ["Product Design", "Strategy", "Product Design", "Product Design", "Product Design"]
      return (
@@ -36,6 +37,8 @@ function Expertise(props) {
         </Wrapper>
     );
 =======
+=======
+>>>>>>> 2713d1b67bf885cdbd46d0bf64d98c7973eda47a
   const tagOne = [
     "Product Development",
     "Community management",
@@ -88,7 +91,10 @@ function Expertise(props) {
       </div>
     </Wrapper>
   );
+<<<<<<< HEAD
 >>>>>>> 61c22c6 (feat:fixed the rest of the breakpoints)
+=======
+>>>>>>> 2713d1b67bf885cdbd46d0bf64d98c7973eda47a
 }
 
 export default Expertise;
