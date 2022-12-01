@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <Wrapper>
+    <Wrapper className={"mt-[8.4375rem] "}>
       <div className="flex flex-col ipad:flex-row justify-between gap-y-12 ipad:gap-y-0 text-xl ipad:text-2xl font-normal leading-8 tracking-thiner ipad:tracking-thin ipad:pb-12 pb-5 tablet:pb-14 desktop:pb-12">
         <p className="flex flex-col">
           <span>Ape Unit GmbH</span>
