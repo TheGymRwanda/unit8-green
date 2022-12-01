@@ -1,123 +1,143 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Wrapper from "../wrappers/Wrapper";
-export default function Project() {
+import arrow from "../../public/assets/images/arrow.svg";
+
+export default function ProjectSections() {
+  const [className, setClassName] = useState(`opacity-0`);
+
   const hover = [
     { link: "", src: "" },
-    { link: "Dacade", src: "/assets/images/dacade.webp", quote: "" },
-    { link: "Bitlipa", src: "/assets/images/bitlipa.webp", quote: "" },
-    { link: "Symplifi", src: "/assets/images/symplifi.webp", quote: "" },
-    { link: "UTU.io", src: "/assets/images/utu.webp", quote: "" },
-    { link: "NeueUX", src: "/assets/images/neueux.webp", quote: "" },
-    { link: "Lab3", src: "/assets/images/lab3.webp", quote: "" },
-    { link: "Even", src: "/assets/images/even.webp", quote: "" },
+    {
+      link: "Dacade",
+      src: "/assets/images/dacade.webp",
+      quote: "Peer-to-Peer learning platform",
+    },
+    {
+      link: "Bitlipa",
+      src: "/assets/images/bitlipa.webp",
+      quote: "Cryptocurrency bitcoin Ethereum Trading App African Kenyan",
+    },
+    {
+      link: "Symplifi",
+      src: "/assets/images/symplifi.webp",
+      quote:
+        "Fintech solution providing an alternative to the global remittance market",
+    },
+    {
+      link: "UTU.io",
+      src: "/assets/images/utu.webp",
+      quote: "Resources that improve design systems for web3",
+    },
+    {
+      link: "NeueUX",
+      src: "/assets/images/neueux.webp",
+      quote: "Resources that improve design systems for web3",
+    },
+    {
+      link: "Lab3",
+      src: "/assets/images/lab3.webp",
+      quote: "A web3 knowledge exchange community for music makers",
+    },
+    {
+      link: "Even",
+      src: "/assets/images/even.webp",
+      quote: "A web3 knowledge exchange community for music makers",
+    },
   ];
   const [link, setLink] = useState(0);
-  const [timed, setTime] = useState(false);
   const [show, setShow] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
   const ref = useRef(0);
-  const [offsetTop, setOffsetTop] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(ref.current.offsetLeft, scrollY);
-  // console.log(scrollY > ref.current?.offsetTop);
-
-  useEffect(() => {
-    setTime(true);
     setShow(true);
-    // var image = setInterval(() => {
-
-    // }, 50);
-    // return () => clearInterval(image);
   }, [link]);
 
   return (
-    <Wrapper styles={`w-full h-[35rem]`}>
-      <p className="text-secondary-100 text-3xl mb-4">Project</p>
-      <div className="hidden ipad:grid ipad:grid-cols-8 ">
+    <Wrapper
+      styles={`w-full desktop:h-[64rem] desktop:pt-36 mb-12 desktop:mb-0`}
+    >
+      <p className="text-secondary-100 text-2xl desktop:mb-4 desktop:pl-1 mt-16 mb-4 ipad:mt-16 desktop:mt-0">
+        Project
+      </p>
+
+      <div className="hidden desktop:grid desktop:grid-cols-4 relative">
         <ul
           ref={ref}
-          className="flex flex-col gap-8 text-6xl cursor-pointer h-0 carousel carousel-vertical rounded-box"
+          className="flex flex-col text-[4.5rem] -space-y-4 cursor-pointer"
         >
           {hover.map(
             (item, i) =>
               i !== 0 && (
                 <li
                   key={i}
-                  className="flex flex-col gap-4 ipad:gap-0 ipad:inline-block carousel-item"
+                  className="flex flex-col desktop:-space-y-4 desktop:inline-block  "
                 >
-                  <p
-                    className={`inline-block relative ipad:after:content-[''] ipad:after:bottom-0 ipad:after:absolute ipad:after:h-[0.125rem] ipad:after:w-0 ipad:after:left-0 ipad:after:origin-left ipad:after:bg-black ipad:hover:after:w-full ipad:hover:after:origin-right ipad:hover:after:transition-all ipad:hover:after:duration-200 ipad:hover:after:ease-out ipad:hover:after:delay-300`}
+                  <div
+                    className="inline-block relative group desktop:after:content-[''] desktop:after:absolute desktop:after:h-[0.125rem] desktop:after:w-0 desktop:after:bottom-5 desktop:after:left-0 desktop:after:origin-left desktop:after:bg-black desktop:hover:after:w-full desktop:hover:after:origin-right desktop:hover:after:transition-all desktop:hover:after:duration-200 desktop:hover:after:ease-out desktop:hover:after:delay-100"
                     onMouseEnter={() => setLink(i)}
-                    onMouseLeave={() => setLink(0)}
+                    onMouseLeave={() => setLink(i)}
                   >
-                    {item.link}
-                  </p>
+                    <p>{item.link}</p>
+                    <Image
+                      alt="arrow"
+                      src={arrow}
+                      className="absolute top-5 scale-0 group-hover:scale-100 duration-100 delay-200 ease-in -right-5"
+                    />
+                  </div>
                 </li>
               )
           )}
         </ul>
-        <div className="col-span-1 hidden ipad:inline-block"></div>
-        <div className="hidden ipad:inline-block ipad:col-span-5">
-          <div className={``}>
-            {timed && link !== 0 ? (
+        {link !== 0 ? (
+          <>
+            <div className="sticky h-fit top-4 col-span-3">
               <Image
                 src={hover[link].src}
                 alt=""
                 width="1000"
-                height="1500"
-                className="rounded-xl shadow-pictures"
+                height="1000"
+                className="rounded-xl shadow-pictures desktop:inline-block "
+                layout="responsive"
+                objectFit="contain"
               />
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
+              <p className="text-2xl pt-6">{hover[link].quote}</p>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
+        {/* </div> */}
       </div>
       {/* mobile breakpoint */}
-      <div className="flex flex-col gap-4 ipad:hidden">
+      <div className={`flex flex-col gap-4 desktop:hidden `}>
         {hover.map(
           (item, i) =>
             i !== 0 && (
-              <ul key={i} className="">
+              <ul key={i} className="text-5xl tablet:text-7xl tracking-wider">
                 <li
                   onClick={() => {
                     setLink(i);
                     setShow(!show);
                   }}
-                  className={`${link !== 0 && show ? "" : ""}`}
+                  className={`${show ? "cursor-pointer" : ""}`}
                 >
                   {item.link}
+                  {link === i && show && (
+                    <div className="">
+                      <Image
+                        src={item.src}
+                        alt=""
+                        width="1000"
+                        height="1000"
+                        className="rounded-xl shadow-pictures mt-3 mb-12 tablet:mt-5 tablet:w-[59.5rem] tablet:h-[32.5613rem] ipad:mb-16 ipad:w-[47.4769rem] ipad:h-[25.9831rem] w-[21.8125rem] h-[11.9375rem]"
+                      />
+                      <p className="text-xl tracking-tight -mt-12 mb-12 max-w-[51.5rem]">
+                        {hover[link].quote}
+                      </p>
+                    </div>
+                  )}
                 </li>
-                {link === i && show && (
-                  <div
-                    className={` animate-show ${
-                      link === 0
-                        ? "h-56 hidden"
-                        : link !== 0
-                        ? " rounded-xl shadow-pictures"
-                        : ""
-                    }`}
-                  >
-                    <Image
-                      src={item.src}
-                      alt=""
-                      width="1000"
-                      height="1000"
-                      className="ipad:hidden rounded-xl"
-                    />
-                  </div>
-                )}
               </ul>
             )
         )}
