@@ -10,7 +10,7 @@ function Expertise(props) {
             <div />
             <div className='col-span-2 grid gap-y-6'>
             <h3 className='text-secondary-100 text-xl md:text-2xl leading-8 tracking-thin self-start'>Expertise</h3>
-            <div className='flex w-full flex-col ipad:flex-row gap-y-3 ipad:gap-x-6 self-ends'>
+            <div className='flex w-full flex-col ipad:flex-row gap-y-3 ipad:gap-x-6 self-end'>
                 <ul className='flex flex-col gap-y-3 ipad:gap-y-4'>
                     {
                         tagOne.map((tag, i) => {
