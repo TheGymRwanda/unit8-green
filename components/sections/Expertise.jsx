@@ -10,12 +10,12 @@ function Expertise(props) {
             <div />
             <div className='col-span-2 grid gap-y-6'>
             <h3 className='text-secondary-100 text-xl md:text-2xl leading-8 tracking-thin self-start'>Expertise</h3>
-            <div className='flex  flex-col ipad:flex-row gap-y-3 ipad:gap-x-6 self-end'>
+            <div className='flex w-full flex-col ipad:flex-row gap-y-3 ipad:gap-x-6 self-ends'>
                 <ul className='flex flex-col gap-y-3 ipad:gap-y-4'>
                     {
                         tagOne.map((tag, i) => {
                             return (
-                                    <li key={i} className ="border-b border-secondary-50 leading-8 w-78 text-xl font-normal ipad:text-2xl tracking-thiner ipad:tracking-thin">{tag}</li>
+                                    <li key={i} className ="border-b border-secondary-50 leading-8 max-w-full whitespace-nowrap ipad:w-78 text-xl font-normal ipad:text-2xl tracking-thiner ipad:tracking-thin">{tag}</li>
                             )
                         })
                     }
@@ -24,7 +24,7 @@ function Expertise(props) {
                     {
                         tagTwo.map((tag, i) => {
                            return (
-                            <li key={i} className ="border-b border-secondary-50 w-78 text-xl leading-8 ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
+                            <li key={i} className ="border-b border-secondary-50 max-w-full whitespace-nowrap ipad:w-78 text-xl leading-8 ipad:text-2xl tracking-thiner ipad:tracking-thin font-normal">{tag}</li>
                            )
                          })
                     }
