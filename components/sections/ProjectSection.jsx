@@ -4,8 +4,6 @@ import Wrapper from "../wrappers/Wrapper";
 import arrow from "../../public/assets/images/arrow.svg";
 
 export default function ProjectSections() {
-  const [className, setClassName] = useState(`opacity-0`);
-
   const hover = [
     { link: "", src: "" },
     {
@@ -98,8 +96,6 @@ export default function ProjectSections() {
                 width="1000"
                 height="1000"
                 className="rounded-xl shadow-pictures desktop:inline-block "
-                layout="responsive"
-                objectFit="contain"
               />
               <p className="text-2xl pt-6">{hover[link].quote}</p>
             </div>

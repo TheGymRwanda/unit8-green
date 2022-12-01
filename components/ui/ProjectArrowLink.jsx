@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import arrow from "../../public/assets/images/arrow.svg";
 
-function Button({ children, style, link, position }) {
+function ProjectArrowLink({ children, style, link, position }) {
   return (
     <>
       <Link href={`${link}`} target="_blank">
@@ -14,7 +14,7 @@ function Button({ children, style, link, position }) {
             {children}
           </span>
           <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
-            <Image alt="arrow" src={arrow} className={position} />
+            <Image alt="arrow" src={arrow} />
           </span>
         </div>
       </Link>
