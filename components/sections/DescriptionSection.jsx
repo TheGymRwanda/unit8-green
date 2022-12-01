@@ -42,7 +42,7 @@ function DescriptionSection() {
   console.log(refs.current[description]?.offsetLeft);
 
   return (
-    <Wrapper styles="font-normal text-2xl my-8">
+    <Wrapper styles="font-normal text-2xl my-[6rem]">
       <div className="hidden ipad:grid grid-cols-4">
         <div className="hidden tablet:inline-block" />
         <div className="col-span-4 tablet:col-span-3">

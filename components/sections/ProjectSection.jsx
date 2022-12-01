@@ -89,7 +89,7 @@ export default function ProjectSections() {
         </ul>
         {link !== 0 ? (
           <>
-            <div className="sticky h-fit top-4 col-span-3">
+            <div className="sticky h-fit top-4 col-span-3 overflow-hidden">
               <Image
                 src={hover[link].src}
                 alt=""
