@@ -19,7 +19,6 @@ export default function Home() {
         <Expertise />
         <DescriptionSection />
         <Footer />
-        <Project />
       </div>
     </div>
   );
