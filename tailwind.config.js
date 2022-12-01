@@ -8,18 +8,11 @@ module.exports = {
     extend: {
       animation: {
         dropdown: "dropdown 0.3s ease 0s 1 normal forwards",
-        show: "show 0.3s ease 0s 1 normal forwards",
       },
       boxShadow: {
         pictures: "-0.625rem -0.0313rem 5.625rem 0.4375rem rgba(0, 0, 0, 0.12)",
       },
       keyframes: {
-        show: {
-          "0%": { opacity: "1" },
-          "100%": {
-            opacity: "1",
-          },
-        },
         dropdown: {
           "0%": { transform: "translateY(-100px)" },
           "100%": {
@@ -71,6 +64,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
   plugins: [],
 };

@@ -73,7 +73,7 @@ function DescriptionSection() {
             <div>
               {desc[description].description}
               <span className="ipad:inline-block underline hover:no-underline hover:duration-300 ease-in-out desktop:collapse">
-                <Button style="">Learn more</Button>
+                <Button style="hover:no-underline">Learn more</Button>
               </span>
             </div>
             <div className="hidden desktop:block">
