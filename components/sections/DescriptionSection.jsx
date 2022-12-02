@@ -77,7 +77,7 @@ function DescriptionSection() {
               </span>
             </div>
             <div className="hidden desktop:block">
-              <Button style=" underline hover:no-underline hover:duration-300 ease-in-out">
+              <Button style=" underline group-hover:no-underline group-hover:duration-300 ease-in-out">
                 Learn more
               </Button>
             </div>

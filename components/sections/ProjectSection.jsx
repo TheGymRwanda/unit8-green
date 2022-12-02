@@ -59,7 +59,7 @@ export default function ProjectSections() {
         Project
       </p>
 
-      <div className="hidden desktop:grid desktop:grid-cols-4 relative overflow-hidden">
+      <div className="hidden desktop:grid desktop:grid-cols-4 relative">
         <ul
           ref={ref}
           className="flex flex-col text-[4.5rem] -space-y-4 cursor-pointer"
@@ -69,7 +69,7 @@ export default function ProjectSections() {
               i !== 0 && (
                 <li
                   key={i}
-                  className="flex flex-col desktop:-space-y-4 desktop:inline-block  "
+                  className="flex flex-col overflow-hidden desktop:-space-y-4 desktop:inline-block"
                 >
                   <div
                     className="inline-block relative group desktop:after:content-[''] desktop:after:absolute desktop:after:h-[0.125rem] desktop:after:w-0 desktop:after:bottom-5 desktop:after:left-0 desktop:after:origin-left desktop:after:bg-black desktop:hover:after:w-full desktop:hover:after:origin-right desktop:hover:after:transition-all desktop:hover:after:duration-200 desktop:hover:after:ease-out desktop:hover:after:delay-100"
