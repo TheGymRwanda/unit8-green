@@ -4,6 +4,7 @@ import Footer from "../components/layouts/Footer";
 import Expertise from "../components/sections/Expertise";
 import DescriptionSection from "../components/sections/DescriptionSection";
 import ProjectSections from "../components/sections/ProjectSection";
+import GallerySection from "../components/sections/GallerySection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ProjectSections />
         <Expertise />
         <DescriptionSection />
+        <GallerySection/>
         <Footer />
       </div>
     </div>

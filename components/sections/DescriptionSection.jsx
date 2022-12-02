@@ -39,7 +39,6 @@ function DescriptionSection() {
       left: refs.current[description]?.offsetLeft / 16,
     });
   }, [description]);
-  console.log(refs.current[description]?.offsetLeft);
 
   return (
     <Wrapper styles="font-normal text-2xl my-[6rem]">
