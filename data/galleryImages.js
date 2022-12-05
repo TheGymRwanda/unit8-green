@@ -1,0 +1,21 @@
+const images = [
+    {image:'/assets/team/couple_hiking.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662716691910736/couple_hiking.webp'},
+    {image:'/assets/team/Doe_in_alife_jacket.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662717170073600/Doe_in_alife_jacket.webp'},
+    {image:'/assets/team/outdoor_presentation.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662717497217055/outdoor_presentation.webp'},
+    {image:'/assets/team/round_table_seminar.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662717790826596/round_table_seminar.webp'},
+    {image:'/assets/team/team_having_fun.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662718071849080/team_having_fun.webp'},
+    {image:'/assets/team/team_of_4.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662716352184370/team_of_4.webp'},
+    {image:'/assets/team/team_night_out.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662718763909210/team_night_out.webp'},
+    {image:'/assets/team/team_night_out.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662718763909210/team_night_out.webp'},
+    {image:'/assets/team/Team_night_out_chatting.webp',
+    link:'https://cdn.discordapp.com/attachments/1040583088620703865/1044662719225270373/Team_night_out_chatting.webp'},
+  ]
+  export default images;
