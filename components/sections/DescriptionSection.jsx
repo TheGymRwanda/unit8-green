@@ -18,7 +18,7 @@ const DescriptionSection = () => {
   }, [description]);
 
   return (
-    <Wrapper styles="font-normal text-2xl my-28">
+    <Wrapper styles="font-normal text-2xl desktop:mt-24 desktop:mb-18 tablet:mt-14 tablet:mb-14 ipad:mt-15 mt-3">
       <div className="hidden ipad:grid grid-cols-4">
         <div className="hidden tablet:inline-block" />
         <div className="col-span-4 tablet:col-span-3">
