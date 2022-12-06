@@ -39,7 +39,9 @@ module.exports = {
         sans: ["Neufile Grotes", "arial"],
       },
       maxWidth: {
+        47.25: "47.25rem",
         90: "90rem",
+        
       },
       margin: {
         15:"3.875rem",
@@ -65,6 +67,7 @@ module.exports = {
       },
       width: {
         78: "19.375rem",
+        
       },
     },
   },
