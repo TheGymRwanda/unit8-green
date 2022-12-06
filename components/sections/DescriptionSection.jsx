@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { createRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
 import Arrow from "../Arrow";
 import Button from "../ui/Button";
 import DESCRIPTIONS from "../../data/descriptions";
 
-function DescriptionSection() {
+const DescriptionSection = () => {
   const [description, setDescription] = useState(0);
   const [show, setShow] = useState(true);
   const refs = useRef(new Array());
@@ -101,6 +100,6 @@ function DescriptionSection() {
       </div>
     </Wrapper>
   );
-}
+};
 
 export default DescriptionSection;
