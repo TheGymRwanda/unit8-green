@@ -49,8 +49,8 @@ module.exports = {
         5.5: "1.3256rem",
       },
       letterSpacing: {
-        thin: "-0.015rem",
-        thiner: "-0.0125rem",
+        thin: "0.015rem",
+        thiner: "0.0125rem",
       },
       gap: {
         13: "3.875rem",
@@ -60,6 +60,7 @@ module.exports = {
         k: "15.625rem_minmax(0,_1fr)",
       },
       width: {
+        70: "16.0625rem",
         78: "19.375rem",
       },
     },
