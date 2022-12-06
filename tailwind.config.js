@@ -10,7 +10,7 @@ module.exports = {
         dropdown: "dropdown 0.3s ease 0s 1 normal forwards",
       },
       boxShadow: {
-        pictures: "-0.625rem -0.0313rem 5.625rem 0.4375rem rgba(0, 0, 0, 0.12)",
+        pictures: "-0.001rem -0.001rem 1rem 0.0625rem #E4E4E4",
       },
       keyframes: {
         dropdown: {
