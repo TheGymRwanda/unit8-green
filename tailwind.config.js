@@ -80,6 +80,9 @@ module.exports = {
       fontSize: {
         "7.5xl": "5.375rem",
       },
+      height: {
+        '0.15': '0.15rem',
+      },
       gap: {
         13: "3.875rem",
         81: "20.75rem",
