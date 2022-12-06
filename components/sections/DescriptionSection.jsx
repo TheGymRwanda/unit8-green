@@ -5,7 +5,7 @@ import Arrow from "../Arrow";
 import Button from "../ui/Button";
 import DESCRIPTIONS from "../../data/descriptions";
 
-function DescriptionSection() {
+const DescriptionSection = ()=> {
  
   const [description, setDescription] = useState(0);
   const [show, setShow] = useState(true);
