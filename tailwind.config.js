@@ -52,6 +52,9 @@ module.exports = {
         thin: "-0.015rem",
         thiner: "-0.0125rem",
       },
+      height: {
+        '0.15': '0.15rem',
+      },
       gap: {
         13: "3.875rem",
         81: "20.75rem",
