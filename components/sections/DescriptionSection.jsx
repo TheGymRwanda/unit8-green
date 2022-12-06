@@ -22,7 +22,7 @@ const DescriptionSection = () => {
       <div className="hidden ipad:grid grid-cols-4">
         <div className="hidden tablet:inline-block" />
         <div className="col-span-4 tablet:col-span-3">
-          <div className="flex gap-8 justify-start relative">
+          <div className="flex gap-8 justify-start relative tablet:max-w-47.25">
             {DESCRIPTIONS.map((item, i) => (
               <button
                 key={i}

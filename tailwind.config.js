@@ -39,6 +39,7 @@ module.exports = {
         sans: ["Neufile Grotes", "arial"],
       },
       maxWidth: {
+        47.25: "47.25rem",
         90: "90rem",
         51.5: "51.5rem",
       },
@@ -67,7 +68,7 @@ module.exports = {
       },
 
       margin: {
-        15:"3.875rem",
+        15: "3.875rem",
         18: "4.4375rem",
       },
       padding: {
@@ -82,7 +83,7 @@ module.exports = {
         "7.5xl": "5.375rem",
       },
       height: {
-        '0.15': '0.15rem',
+        0.15: "0.15rem",
       },
       gap: {
         13: "3.875rem",
