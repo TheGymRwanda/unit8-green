@@ -18,7 +18,7 @@ const DescriptionSection = () => {
   }, [description]);
 
   return (
-    <Wrapper styles="font-normal text-2xl desktop:mt-24 desktop:mb-18 tablet:mt-14 tablet:mb-14 ipad:mt-15 mt-3">
+    <Wrapper styles="font-normal desktop:text-2xl ipad:text-2xl text-xl desktop:mt-24 desktop:mb-18 tablet:mt-14 tablet:mb-14 ipad:mt-15 mt-20 -tracking-thiner">
       <div className="hidden ipad:grid grid-cols-4">
         <div className="hidden tablet:inline-block" />
         <div className="col-span-4 tablet:col-span-3">
@@ -80,7 +80,7 @@ const DescriptionSection = () => {
                   description === i && show && "rotate-180 "
                 } duration-500 ease-in-out`}
               >
-                <Arrow />
+                <Arrow styles={`rotate-180`} />
               </div>
             </button>
             {description === i && show && (
