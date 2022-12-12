@@ -9,7 +9,7 @@ function Button({ children, style, link, position }) {
       <Link href={`${link}`} target="_blank">
         <div className="flex gap-1 items-center group cursor-pointer">
           <span
-            className={`font-normal leading-8 tracking-thiner sm:tracking-thin font-sans ${style}`}
+            className={`font-normal leading-8 tracking-thiner ipad:tracking-thin font-sans ${style}`}
           >
             {children}
           </span>
