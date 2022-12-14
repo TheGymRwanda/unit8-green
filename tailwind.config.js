@@ -49,18 +49,26 @@ module.exports = {
         5.5: "1.3256rem",
       },
       letterSpacing: {
-        thin: "-0.015rem",
-        thiner: "-0.0125rem",
+        thin: "0.015em",
+        thiner: "0.0125em",
+      },
+      minWidth:{
+        '806':"50.375rem",
       },
       gap: {
         13: "3.875rem",
+        25:"6.3125rem",
         81: "20.75rem",
+        98:"25.75rem",
       },
       gridTemplateColumns: {
         k: "15.625rem_minmax(0,_1fr)",
       },
       width: {
+        22: "5.875rem",
         78: "19.375rem",
+        757: "47.3125rem",
+
       },
     },
   },

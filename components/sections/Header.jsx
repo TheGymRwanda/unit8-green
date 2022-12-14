@@ -1,15 +1,17 @@
 import Wrapper from "../wrappers/Wrapper";
-import Button from "../ui/Button";
+import Link from "next/link";
+import Image from "next/image";
+import ArrowSmall from "../../public/assets/images/arrow_small.svg";
 
-function Header() {
+const Header = () => {
   return (
     <Wrapper>
-      <div className="grid mt-12 tablet:grid-cols-4 desktop:grid-cols-3">
-        <h1 className="text-xl ipad:text-2xl desktop:col-span-1 mobile:pb-4.5 font-normal ipad:tracking-thin ipad:leading-8 mobile:leading-7 mobile:tracking-thiner">
+      <div className="flex flex-col tablet:flex-row desktop:gap-98 tablet:gap-25 mt-12 tablet:justify-between ipad:leading-8 ipad:-tracking-thin leading-7 -tracking-thiner">
+        <h1 className="min-w-22 text-xl ipad:text-2xl pb-4.5 font-normal leading-7 -tracking-thiner">
           Ape Unit
         </h1>
-        <div className="hidden ipad:inline-block tablet:col-span-3 desktop:col-span-2 ipad:tracking-thin ipad:leading-8">
-          <h2 className="font-normal text-2xl  ipad:pt-0 ipad:block tablet:inline-block">
+        <div className="hidden ipad:block">
+          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:w-757 -tablet:tracking-thin">
             Unit➇ is a pioneering technology company specialing in decentralised
             technologies that creates end-to-end digital experiences for
             protocols including{" "}
@@ -19,36 +21,51 @@ function Header() {
             and more. Its team of 2,500+ digital specialists across 30+
             locations on 5 continents delivers pioneering work on a global scale
             with a boutique culture.{" "}
-            <span className="block tablet:inline-block group">
-              <Button
-                style={"text-2xl underline group-hover:no-underline "}
-                link={"mailto:web3@apeunit.com"}
-              >
-                Contact Us
-              </Button>
+            <span className="inline-block">
+              <Link href={"mailto:web3@apeunit.com"} target="_blank">
+                <div className="flex gap-1 items-center group cursor-pointer">
+                  <span
+                    className={`font-normal leading-8 tracking-thiner ipad:tracking-thin font-sans ipad:underline group-hover:no-underline`}
+                  >
+                    Contact us
+                  </span>
+                  <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
+                    <Image alt="arrow" src={ArrowSmall} />
+                  </span>
+                </div>
+              </Link>
             </span>
           </h2>
         </div>
-        <div className="block ipad:hidden mobile:leading-7 mobile:tracking-thiner">
+        <div className="block ipad:hidden">
           <h2 className="font-normal text-xl">
             Unit➇ is a pioneering technology and marketing services company that
-            creates end-to-end digital experiences for brands such{" "}
+            creates end-to-end digital experiences for brands such as{" "}
             <span className="text-purple">
               Google, Philips, Audi, Twitch, Patagonia, eBay
-            </span>
+            </span>{" "}
             and more. Its team of 2,500+ digital specialists across 30+
             locations on 5 continents delivers pioneering work on a global scale
             with a boutique culture.
+            <span className="inline-block">
+            <Link href={"mailto:web3@apeunit.com"} target="_blank">
+                <div className="flex gap-1 items-center group cursor-pointer">
+                  <span
+                    className={`font-normal leading-8 -tracking-thiner -ipad:tracking-thin font-sans`}
+                  >
+                     Contact us
+                  </span>
+                  <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
+                    <Image alt="arrow" src={ArrowSmall} />
+                  </span>
+                </div>
+              </Link>
+            </span>
           </h2>
-          <div>
-            <Button style={"text-xl"} link={"mailto:web3@apeunit.com"}>
-              Contact Us
-            </Button>
-          </div>
         </div>
       </div>
     </Wrapper>
   );
-}
+};
 
 export default Header;
