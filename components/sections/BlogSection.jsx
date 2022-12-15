@@ -1,69 +1,49 @@
-import React, {useEffect, useState, useRef} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/css';
-import Card from '../ui/Card';
-import BLOGS from '../../data/blogs';
+import React, { useState, useRef } from "react";
+import Card from "../ui/Card";
+import BLOGS from "../../data/blogs";
+import Arrow from "../Arrow";
 
 const BlogSection = () => {
-  const scc = useRef()
-  const blogSect = useRef()
-  const blogRef = useRef(0)
-  const [scroll, setScroll] = useState(false);
+  const blogSect = useRef(null)
+  const blogRef = useRef(0);
   const [blogs, setBlogs] = useState(BLOGS);
-  const clickHandler=()=>setScroll(!scroll)
-    const [screen, setScreen] = useState(0)
-    useEffect(()=>{
-      console.log('scc',scc)
-        setScreen(innerWidth)
-    },[])
-
-    useEffect(()=>{
-      setBlogs(()=>[...blogs,BLOGS[blogRef.current]])
-      blogRef.current++
-      if(blogRef.current>=BLOGS.length){
-        blogRef.current = 0
-      }
-    },[scroll])
-  return (
-    <div ref={blogSect} onScroll={(e)=>{
-      
-      console.log('yy', scrollX)
-      console.log('inner',innerWidth)
-      console.log('e',e)
-      setBlogs(()=>[...blogs,BLOGS[blogRef.current]])
-      blogRef.current++
-      if(blogRef.current>=BLOGS.length){
-        blogRef.current = 0
-      }
-      console.log(blogRef.current.length)
-      
+  const generateInfinite = () => {
+    setBlogs(() => [...blogs, BLOGS[blogRef.current]]);
+    blogRef.current++;
+    if (blogRef.current >= BLOGS.length) {
+      blogRef.current = 0;
     }
-    } className='w-full overflow-x-auto bg-blue-300 scrollbar-hide'>
-    <div className='flex gap-6  mx-auto w-[1440px] max-w-[90%]'>
-      {/* {BLOGS.map((blog,index)=><div key={index}><Card {...blog}/></div>)} */}
-      <div ref={scc} className={` bg-red-500 relative duration-300 ease-in-out ${scroll?'':'translate-x-[0%]'}  overflow-x-visible scrollbar-hide mr-auto`}>
+  };
+  return (
+    <div className="">
+      <div className="flex gap-8 w-[1440px] max-w-[90%] mx-auto">
+        <h1 className="text-xl font-medium font">Blog</h1>
+        <button onClick={()=>{blogSect.current.scrollLeft +=350}} className="bg-red-500">
+        <Arrow />
+        </button>
+        <button onClick={()=>{blogSect.current.scrollLeft -=350}} className="bg-green-600">
+        <Arrow />
+        </button>
+      
+      </div>
+    <div
+    ref={blogSect}
+      onScroll={generateInfinite}
+      className="w-full overflow-x-auto scrollbar-hide smooth-scroll ease-in-out duration-300"
+    >
+      <div className="flex gap-6  mx-auto w-[1440px] max-w-[90%]">
+        <div>
           <div className="inline-flex gap-8">
-            {/* <div className='absolute top-0 left-0 flex w-[400%] gap-8 snap-none'> */}
-
-            {blogs.map((blog,index)=><div className='' key={index}><Card {...blog}/></div>)}
+            {blogs.map((blog, index) => (
+              <div className="" key={index}>
+                <Card {...blog} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
-          <div className="hidden lg:flex gap-8 py-16">
-              <button>
-            <div className="">
-              
-              
-            </div>
-              </button>
-              <button onClick={clickHandler}>
-            <div>
-            </div>
-                </button>
-          </div>
-    </div>
-  )
-}
+    </div></div>
+  );
+};
 
-export default BlogSection
+export default BlogSection;
