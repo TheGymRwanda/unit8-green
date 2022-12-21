@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
-import Arrow from "../Arrow";
+import Arrow from "../vectors/Arrow";
 import Button from "../ui/Button";
 
 function DescriptionSection() {
@@ -77,7 +77,7 @@ function DescriptionSection() {
             </div>
             <div className="hidden desktop:block">
               <Button style=" underline group-hover:no-underline group-hover:duration-300 ease-in-out">
-                Learn more
+                Learn
               </Button>
             </div>
 

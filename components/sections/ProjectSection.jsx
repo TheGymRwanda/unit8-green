@@ -1,113 +1,73 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import Wrapper from "../wrappers/Wrapper";
 import arrow from "../../public/assets/images/arrow.svg";
+import IMAGES from "../../data/projectImagesData";
+import Link from "next/link";
 
-export default function ProjectSections() {
-  const hover = [
-    { link: "", src: "" },
-    {
-      link: "Dacade",
-      src: "/assets/images/dacade.webp",
-      quote: "Peer-to-Peer learning platform",
-    },
-    {
-      link: "Bitlipa",
-      src: "/assets/images/bitlipa.webp",
-      quote: "Cryptocurrency bitcoin Ethereum Trading App African Kenyan",
-    },
-    {
-      link: "Symplifi",
-      src: "/assets/images/symplifi.webp",
-      quote:
-        "Fintech solution providing an alternative to the global remittance market",
-    },
-    {
-      link: "UTU.io",
-      src: "/assets/images/utu.webp",
-      quote: "Resources that improve design systems for web3",
-    },
-    {
-      link: "NeueUX",
-      src: "/assets/images/neueux.webp",
-      quote: "Resources that improve design systems for web3",
-    },
-    {
-      link: "Lab3",
-      src: "/assets/images/lab3.webp",
-      quote: "A web3 knowledge exchange community for music makers",
-    },
-    {
-      link: "Even",
-      src: "/assets/images/even.webp",
-      quote: "A web3 knowledge exchange community for music makers",
-    },
-  ];
+const ProjectSections = () => {
   const [link, setLink] = useState(0);
   const [show, setShow] = useState(true);
-  const ref = useRef(0);
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     setShow(true);
   }, [link]);
 
   return (
     <Wrapper
-      styles={`w-full desktop:h-[64rem] desktop:pt-36 mb-12 desktop:mb-0`}
+      styles={`w-full desktop:mt-34 desktop:mb-31 tablet:mb-26.5 tablet:mt-27 ipad:mb-23 ipad:mt-17.2 mobile:mb-20.3 mobile:mt-7.06`}
     >
-      <p className="text-secondary-100 text-2xl desktop:mb-4 desktop:pl-1 mt-16 mb-4 ipad:mt-16 desktop:mt-0">
+      <p className="text-secondary-100 text-2xl desktop:-space-y-6 desktop:mb-0 desktop:pl-1 mt-16 mb-4 ipad:mt-16 desktop:mt-0 leading-7">
         Project
       </p>
 
-      <div className="hidden desktop:grid desktop:grid-cols-4 relative">
-        <ul
-          ref={ref}
-          className="flex flex-col text-[4.5rem] -space-y-4 cursor-pointer"
-        >
-          {hover.map(
+      <div className="hidden desktop:grid desktop:grid-cols-5 relative mt-2.25">
+        <ul className="flex flex-col text-7.5xl cursor-pointer col-span-2 -space-y-5 leading-snug">
+          {IMAGES.map(
             (item, i) =>
               i !== 0 && (
                 <li
                   key={i}
-                  className="flex flex-col overflow-hidden desktop:-space-y-4 desktop:inline-block"
+                  className={`flex flex-col overflow-hidden desktop:inline-block mb-0`}
                 >
                   <div
-                    className="inline-block relative group desktop:after:content-[''] desktop:after:absolute desktop:after:h-[0.125rem] desktop:after:w-0 desktop:after:bottom-5 desktop:after:left-0 desktop:after:origin-left desktop:after:bg-black desktop:hover:after:w-full desktop:hover:after:origin-right desktop:hover:after:transition-all desktop:hover:after:duration-200 desktop:hover:after:ease-out desktop:hover:after:delay-100"
+                    className={` inline-block relative group desktop:after:content-[''] desktop:after:absolute desktop:after:h-0.5 desktop:after:w-0 desktop:after:bottom-5 desktop:after:hover:w-full desktop:after:left-0 desktop:after:origin-left desktop:after:bg-black desktop:hover:after:origin-left desktop:after:transition-all desktop:after:duration-200 desktop:after:ease-in-out desktop:after:delay-100`}
                     onMouseEnter={() => setLink(i)}
                     onMouseLeave={() => setLink(i)}
                   >
-                    <p>{item.link}</p>
+                    <Link
+                      href={`${IMAGES[i].link}`}
+                      className="pr-4"
+                      target={"_blank"}
+                    >
+                      {" "}
+                      {item.heading}
+                    </Link>
                     <Image
                       alt="arrow"
                       src={arrow}
-                      className="absolute top-5 scale-0 group-hover:scale-100 duration-100 delay-200 ease-in -right-5"
+                      className="absolute top-5 hidden group-hover:inline-block duration-100 -right-0"
                     />
                   </div>
                 </li>
               )
           )}
         </ul>
-        {link !== 0 ? (
-          <>
-            <div className="sticky h-fit top-4 col-span-3">
-              <Image
-                src={hover[link].src}
-                alt=""
-                width="1000"
-                height="1000"
-                className="rounded-xl shadow-pictures desktop:inline-block "
-              />
-              <p className="text-2xl pt-6">{hover[link].quote}</p>
-            </div>
-          </>
-        ) : (
-          ""
+        {link !== 0 && (
+          <div className="sticky h-fit top-4 mt-10 col-span-3">
+            <Image
+              className="rounded-xl shadow-pictures desktop:inline-block max-w-full max-h-full"
+              src={IMAGES[link].src}
+              alt=""
+              width={1000}
+              height={1000}
+            />
+            <p className="text-2xl pt-6">{IMAGES[link].quote}</p>
+          </div>
         )}
-        {/* </div> */}
       </div>
       {/* mobile breakpoint */}
-      <div className={`flex flex-col gap-4 desktop:hidden `}>
-        {hover.map(
+      <div className={`desktop:hidden `}>
+        {IMAGES.map(
           (item, i) =>
             i !== 0 && (
               <ul key={i} className="text-5xl tablet:text-7xl tracking-wider">
@@ -116,20 +76,23 @@ export default function ProjectSections() {
                     setLink(i);
                     setShow(!show);
                   }}
-                  className={`${show ? "cursor-pointer" : ""}`}
+                  className={`${show ? "cursor-pointer mb-2" : ""}`}
                 >
-                  {item.link}
+                  {item.heading}
                   {link === i && show && (
-                    <div className="">
-                      <Image
-                        src={item.src}
-                        alt=""
-                        width="1000"
-                        height="1000"
-                        className="rounded-xl shadow-pictures mt-3 mb-12 tablet:mt-5 tablet:w-[59.5rem] tablet:h-[32.5613rem] ipad:mb-16 ipad:w-[47.4769rem] ipad:h-[25.9831rem] w-[21.8125rem] h-[11.9375rem]"
-                      />
-                      <p className="text-xl tracking-tight -mt-12 mb-12 max-w-[51.5rem]">
-                        {hover[link].quote}
+                    //
+                    <div className="tablet:mt-2.7 ipad:mt-[]">
+                      <Link href={IMAGES[link].link} target={"_blank"}>
+                        <Image
+                          src={item.src}
+                          alt=""
+                          width="1000"
+                          height="1000"
+                          className="rounded-xl shadow-pictures mt-3 tablet:min-w-full tablet:max-w-full tablet:min-h-32.5 ipad:mb-5 ipad:min-w-47.4 ipad:h-97.9 min-w-21.8 min-h-11.9"
+                        />
+                      </Link>
+                      <p className="text-xl tracking-tight tablet:mt-0 tablet:mb-12 max-w-51.5 ipad:mt-2.55 ipad:mb-12 mb-6">
+                        {IMAGES[link].quote}
                       </p>
                     </div>
                   )}
@@ -140,4 +103,5 @@ export default function ProjectSections() {
       </div>
     </Wrapper>
   );
-}
+};
+export default ProjectSections;
