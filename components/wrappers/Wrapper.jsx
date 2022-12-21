@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 function Wrapper({ children, styles }) {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(null);
 
   const updateWidth = () => {
-    setWidth(window.innerWidth);
+    setWidth(innerWidth);
   };
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
