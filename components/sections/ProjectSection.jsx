@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Wrapper from "../wrappers/Wrapper";
-import arrow from "../../public/assets/images/arrow.svg";
 
 export default function ProjectSections() {
   const hover = [
@@ -77,11 +76,11 @@ export default function ProjectSections() {
                     onMouseLeave={() => setLink(i)}
                   >
                     <p>{item.link}</p>
-                    <Image
+                    {/* <Image
                       alt="arrow"
                       src={arrow}
                       className="absolute top-5 scale-0 group-hover:scale-100 duration-100 delay-200 ease-in -right-5"
-                    />
+                    /> */}
                   </div>
                 </li>
               )
