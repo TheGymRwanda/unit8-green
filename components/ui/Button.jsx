@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { ArrowFacingRightCorner } from "../vectors/Arrow";
+import arrow from "../../public/assets/images/arrow.svg";
 
-const Button = ({ children, style, link, position }) => {
+function Button({ children, style, link, position }) {
   return (
     <>
       <Link href={`${link}`} target="_blank">
@@ -14,16 +14,12 @@ const Button = ({ children, style, link, position }) => {
             {children}
           </span>
           <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
-            <Image
-              alt="arrow"
-              src={ArrowFacingRightCorner}
-              className={position}
-            />
+            <Image alt="arrow" src={arrow} className={position} />
           </span>
         </div>
       </Link>
     </>
   );
-};
+}
 
 export default Button;

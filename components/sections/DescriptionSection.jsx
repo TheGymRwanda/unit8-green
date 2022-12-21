@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
-import Arrow from "../vectors/Arrow";
+import Arrow from "../Arrow";
 import Button from "../ui/Button";
 
 function DescriptionSection() {
