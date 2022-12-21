@@ -94,8 +94,8 @@ module.exports = {
       },
       maxWidth: {
         "6.5xl": "76.3125rem",
-        "90" : "90rem"
-      }
+        90: "90rem",
+      },
     },
   },
   plugins: [],
