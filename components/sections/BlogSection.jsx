@@ -51,11 +51,7 @@ const BlogSection = () => {
         <div className="flex gap-6  mx-auto w-[1440px] max-w-[90%]">
           <div>
             <div className="inline-flex gap-8">
-              {blogs.map((blog, index) => (
-                <div className="" key={index}>
-                  <Card {...blog} />
-                </div>
-              ))}
+              {blogs.map((blog, index) => <Card key={index} {...blog} />)}
             </div>
           </div>
         </div>
