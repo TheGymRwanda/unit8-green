@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Wrapper({ children, styles }) {
+const Wrapper = ({ children, styles }) => {
   const [width, setWidth] = useState(null);
 
   const updateWidth = () => {
@@ -20,6 +20,5 @@ function Wrapper({ children, styles }) {
       {children}
     </div>
   );
-}
-
+};
 export default Wrapper;

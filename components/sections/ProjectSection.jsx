@@ -5,13 +5,12 @@ import arrow from "../../public/assets/images/arrow.svg";
 import IMAGES from "../../data/projectImagesData";
 import Link from "next/link";
 
-export default function ProjectSections() {
+const ProjectSections = () => {
   const [link, setLink] = useState(0);
   const [show, setShow] = useState(true);
   useLayoutEffect(() => {
     setShow(true);
   }, [link]);
-  //Use the destructuring object to minimize the code base size
 
   return (
     <Wrapper
@@ -104,4 +103,5 @@ export default function ProjectSections() {
       </div>
     </Wrapper>
   );
-}
+};
+export default ProjectSections;
