@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <Wrapper>
       <div className="flex flex-col tablet:flex-row desktop:gap-98 tablet:gap-25 mt-12 tablet:justify-between ipad:leading-8 ipad:-tracking-thin leading-7 -tracking-thiner">
-        <h1 className="min-w-22 text-xl ipad:text-2xl pb-4.5 font-normal leading-7 -tracking-thiner">
+        <h1 className="text-xl ipad:text-2xl pb-4.5 font-normal leading-7 -tracking-thiner">
           Ape Unit
         </h1>
         <div className="hidden ipad:block">
-          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:w-757 -tablet:tracking-thin">
+          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:w-757 tablet:-tracking-thin">
             Unit➇ is a pioneering technology company specialing in decentralised
             technologies that creates end-to-end digital experiences for
             protocols including{" "}
