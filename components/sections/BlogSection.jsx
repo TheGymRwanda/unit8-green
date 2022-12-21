@@ -2,10 +2,9 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Card from "../ui/Card";
 import BLOGS from "../../data/blogs";
-import leftArrow from "../../public/assets/images/leftArrow.svg"
-import leftArrow2 from "../../public/assets/images/leftArrow-2.svg"
-import rightArrow from "../../public/assets/images/rightArrow.svg"
-import rightArrow2 from "../../public/assets/images/rightArrow-2.svg"
+import leftArrow from "../../public/assets/images/leftArrow.svg";
+import leftArrow2 from "../../public/assets/images/leftArrow-2.svg";
+import rightArrow2 from "../../public/assets/images/rightArrow-2.svg";
 
 const BlogSection = () => {
   const blogSect = useRef(null)
@@ -30,7 +29,7 @@ const BlogSection = () => {
         }
   };
   return (
-    <div className="">
+    <div className="mb-[138px] ipad:mb-[127px] desktop:mb-[135px] large:mb-[124.61px]">
       <div className="flex gap-8 w-[1440px] max-w-[90%] mx-auto mb-8">
         <h1 className="text-xl font-medium text-gray-400">Blog</h1>
         <div className="hidden desktop:flex w-16 justify-between">
