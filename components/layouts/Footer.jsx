@@ -27,8 +27,8 @@ function Footer() {
             <Link href={"https://apeunit.com/impressum.txt"} target="_blank">
               Impressum
             </Link>
-          </span>{" "}
-          {" / "}
+          </span>
+          <span> / </span>
           <span>
             <Link href={"https://apeunit.com/datenschutz.txt"} target="_blank">
               Privacy
