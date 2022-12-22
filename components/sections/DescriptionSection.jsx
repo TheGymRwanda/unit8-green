@@ -43,9 +43,13 @@ const DescriptionSection = () => {
         />
         <div
           className={` ${
+<<<<<<< HEAD
             width < 1440
               ? "tablet:col-span-7 tablet:ml-2"
               : "desktop:col-span-5"
+=======
+            width < 1440 ? "tablet:col-span-7" : "desktop:col-span-5"
+>>>>>>> 25f5060c47edcb480bd0f9be003c0fc1f95245ae
           }`}
         >
           <div className="flex gap-8 justify-start relative tablet:max-w-47.25">
