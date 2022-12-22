@@ -7,11 +7,7 @@ const Button = ({ children, style, link, position }) => {
       <Link href={`${link}`} target="_blank">
         <div className="flex gap-1 items-center group cursor-pointer">
           <span
-<<<<<<< HEAD
             className={`font-normal leading-7 ipad:leading-8 -tracking-thiner ipad:-tracking-thin font-sans ${style}`}
-=======
-            className={`font-normal leading-8 tracking-thiner ipad:tracking-thin font-sans ${style}`}
->>>>>>> b837662 (fix: adding the right space in header section)
           >
             {children}
           </span>

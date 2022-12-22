@@ -17,7 +17,7 @@ const Wrapper = ({ children, styles }) => {
 
   return (
     <div
-      className={`max-w-[90rem] px-5  mx-auto w-full relative ipad:px-16 tablet:px-9 desktop:px-16${styles} ${""}`}
+      className={`max-w-[90rem] px-5  mx-auto w-full relative ipad:px-16 tablet:px-9 desktop:px-16 ${styles} ${""}`}
     >
       {children}
     </div>

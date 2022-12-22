@@ -103,7 +103,6 @@ module.exports = {
         thin: "0.015em",
         thiner: "0.0125em",
       },
-<<<<<<< HEAD
       fontSize: {
         "7.5xl": "5.375rem",
         2: "1.75rem",
@@ -117,32 +116,15 @@ module.exports = {
         81: "20.75rem",
         98: "25.75rem",
         25: "6.3125rem",
-=======
-      minWidth:{
-        '806':"50.375rem",
-      },
-      gap: {
-        13: "3.875rem",
-        25:"6.3125rem",
-        81: "20.75rem",
-        98:"25.75rem",
->>>>>>> b837662 (fix: adding the right space in header section)
       },
       gridTemplateColumns: {
         k: "15.625rem_minmax(0,_1fr)",
       },
       width: {
-<<<<<<< HEAD
         70: "16.0625rem",
         22: "5.875rem",
         78: "19.375rem",
         757: "47.3125rem",
-=======
-        22: "5.875rem",
-        78: "19.375rem",
-        757: "47.3125rem",
-
->>>>>>> b837662 (fix: adding the right space in header section)
       },
     },
   },
