@@ -1,17 +1,16 @@
 import Wrapper from "../wrappers/Wrapper";
 import Link from "next/link";
 import Image from "next/image";
-import ArrowSmall from "../../public/assets/images/arrow_small.svg";
 
 const Header = () => {
   return (
     <Wrapper>
       <div className="flex flex-col tablet:flex-row desktop:gap-98 tablet:gap-25 mt-12 tablet:justify-between ipad:leading-8 ipad:-tracking-thin leading-7 -tracking-thiner">
-        <h1 className="text-xl ipad:text-2xl pb-4.5 font-normal leading-7 -tracking-thiner">
+        <h1 className="text-xl ipad:text-2xl pb-4.5 font-normal leading-7">
           Ape Unit
         </h1>
         <div className="hidden ipad:block">
-          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:max-w-[45.5rem] tablet:-tracking-thin">
+          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:max-w-[45.875rem] tablet:-tracking-thin">
             Unit➇ is a pioneering technology company specialing in decentralised
             technologies that creates end-to-end digital experiences for
             protocols including{" "}
@@ -30,7 +29,12 @@ const Header = () => {
                     Contact us
                   </span>
                   <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
-                    <Image alt="arrow" src={ArrowSmall} />
+                    <Image
+                      alt="arrow"
+                      src={"/assets/images/arrow.svg"}
+                      width={18}
+                      height={18}
+                    />{" "}
                   </span>
                 </div>
               </Link>
@@ -47,16 +51,21 @@ const Header = () => {
             and more. Its team of 2,500+ digital specialists across 30+
             locations on 5 continents delivers pioneering work on a global scale
             with a boutique culture.
-            <span className="inline-block text-xl leading-7 -tracking-thiner">
-            <Link href={"mailto:web3@apeunit.com"} target="_blank">
+            <span className="inline-block">
+              <Link href={"mailto:web3@apeunit.com"} target="_blank">
                 <div className="flex gap-1 items-center group cursor-pointer">
                   <span
                     className={`font-normal leading-8 -tracking-thiner -ipad:tracking-thin font-sans`}
                   >
-                     Contact us
+                    Contact us
                   </span>
                   <span className="group-hover:-translate-y-1 transition-transform duration-300 group-hover:translate-x-1">
-                    <Image alt="arrow" src={ArrowSmall} />
+                    <Image
+                      alt="arrow"
+                      src={"/assets/images/arrow.svg"}
+                      width={15}
+                      height={15}
+                    />{" "}
                   </span>
                 </div>
               </Link>
