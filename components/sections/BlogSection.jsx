@@ -29,8 +29,8 @@ const BlogSection = () => {
         }
   };
   return (
-    <div className="mb-[138px] ipad:mb-[127px] desktop:mb-[135px] large:mb-[124.61px]">
-      <div className="flex gap-8 w-[1440px] max-w-[90%] mx-auto mb-8">
+    <div className="mb-34 ipad:mb-35 desktop:mb-33 large:mb-29">
+      <div className="flex gap-8 w-90 max-w-90% mx-auto mb-8">
         <h1 className="text-xl font-medium text-gray-400">Blog</h1>
         <div className="hidden desktop:flex w-16 justify-between">
           <button onClick={() => { blogSect.current.scrollLeft -= 302 }}>
@@ -47,7 +47,7 @@ const BlogSection = () => {
         onScroll={generateInfinite}
         className="w-full overflow-x-auto scrollbar-hide smooth-scroll ease-in-out duration-300"
       >
-        <div className="flex gap-6  mx-auto w-[1440px] max-w-[90%]">
+        <div className="flex gap-6  mx-auto w-90 max-w-90%">
           <div>
             <div className="inline-flex gap-8">
               {blogs.map((blog, index) => <Card key={index} {...blog} />)}
