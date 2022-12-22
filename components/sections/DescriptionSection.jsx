@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
 import Arrow from "../Arrow";
 import Button from "../ui/Button";
@@ -20,7 +20,11 @@ const DescriptionSection = () => {
   const updateWidth = () => {
     setWidth(innerWidth);
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
+    window.addEventListener("load", updateWidth, false);
+    return () => window.removeEventListener("load", updateWidth);
+  });
+  useLayoutEffect(() => {
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
@@ -39,7 +43,9 @@ const DescriptionSection = () => {
         />
         <div
           className={` ${
-            width < 1440 ? "tablet:col-span-7" : "desktop:col-span-5"
+            width < 1440
+              ? "tablet:col-span-7 tablet:ml-2"
+              : "desktop:col-span-5"
           }`}
         >
           <div className="flex gap-8 justify-start relative tablet:max-w-47.25">
