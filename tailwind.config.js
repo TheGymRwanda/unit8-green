@@ -35,17 +35,37 @@ module.exports = {
           50: "#E4E4E4",
           100: "#9A9A9A",
         },
+        gray:{
+          50:"#EDEDED"
+        }
+      },
+      fontSize:{
+         2:"1.75rem"
       },
       fontFamily: {
         sans: ["Neufile Grotes", "arial"],
       },
       maxWidth: {
         47.25: "47.25rem",
+        18:"18.875rem",
+        29:"29.8125rem",
         90: "90rem",
         51.5: "51.5rem",
         '90%': "90%",
       },
+      maxHeight:{
+        25:'25.086875rem',
+      },
+      minWidth:{
+        18:"18.875rem",
+        29:"29.8125rem",
+      },
+      minHeight:{
+        25:'25.086875rem',
+        26:'25.625rem',
+      },
       spacing:{
+        2.3:"2.375rem",
         34: '8.625',
         33: '8.4375',
         35:'7.9375rem',
