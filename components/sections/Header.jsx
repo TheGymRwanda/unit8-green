@@ -5,12 +5,12 @@ import Image from "next/image";
 const Header = () => {
   return (
     <Wrapper>
-      <div className="flex flex-col tablet:flex-row desktop:gap-98 tablet:gap-25 mt-12 tablet:justify-between ipad:leading-8 ipad:-tracking-thin leading-7 -tracking-thiner">
-        <h1 className="text-xl ipad:text-2xl pb-4.5 font-normal leading-7">
+      <div className="flex flex-col tablet:flex-row desktop:gap-98 tablet:gap-[120px] mt-12 tablet:justify-between ipad:leading-8 ipad:-tracking-thin leading-7 -tracking-thiner">
+        <h1 className="text-xl ipad:text-2xl pb-4.5 font-normal leading-7 whitespace-nowrap">
           Ape Unit
         </h1>
         <div className="hidden ipad:block">
-          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:max-w-[45.875rem] tablet:-tracking-thin">
+          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:min-w-[8.875rem] tablet:max-w-65.2 desktop:w-[45.875rem] tablet:-tracking-thin">
             Unit➇ is a pioneering technology company specialing in decentralised
             technologies that creates end-to-end digital experiences for
             protocols including{" "}
