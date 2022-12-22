@@ -1,8 +1,8 @@
 import React from "react";
 
-function Arrow() {
+function Arrow({styles}) {
   return (
-    <div>
+    <div className={styles}>
       <svg
         width="17"
         height="18"

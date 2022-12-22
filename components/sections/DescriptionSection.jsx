@@ -1,33 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { createRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
 import Arrow from "../Arrow";
 import Button from "../ui/Button";
+import DESCRIPTIONS from "../../data/descriptions";
 
-function DescriptionSection() {
-  const desc = [
-    {
-      header: "About us",
-      description:
-        "Bloc about us will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-    {
-      header: "What we do",
-      description:
-        "Bloc wat we do will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-    {
-      header: "Employment",
-      description:
-        "Bloc employment will do for cooperation what the internet did for communication - We believe that blockchain technology has the potential to shift financial models as we know them, creating revenue streams that are more sustainable and fair for users. We envision a future in which financial infrastructures are rather decentralised and horizontal, in which any member can have a say. Through its immutability, blockchain technology provides trustworthy infrastructures that allow cooperation on a large scale. ",
-      link: "/link",
-      end: "Work Meaningful - With our work, we aim to impact society positively. The projects we get involved with the aim to solve significant problems in our society, sustainably and in the long run, rather than looking for a quick profit through speculation or encouraging harmful behavior.",
-    },
-  ];
+const DescriptionSection = () => {
   const [description, setDescription] = useState(0);
   const [show, setShow] = useState(true);
   const refs = useRef(new Array());
@@ -39,14 +16,34 @@ function DescriptionSection() {
       left: refs.current[description]?.offsetLeft / 16,
     });
   }, [description]);
+  const [width, setWidth] = useState(null);
+  const updateWidth = () => {
+    setWidth(innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   return (
-    <Wrapper styles="font-normal text-2xl my-[6rem]">
-      <div className="hidden ipad:grid grid-cols-4">
-        <div className="hidden tablet:inline-block" />
-        <div className="col-span-4 tablet:col-span-3">
-          <div className="flex gap-8 justify-start relative">
-            {desc.map((item, i) => (
+    <Wrapper styles="font-normal desktop:text-2xl ipad:text-2xl text-xl desktop:mt-24 desktop:mb-18 tablet:mt-14 tablet:mb-14 ipad:mt-15 mt-20 -tracking-thiner">
+      <div
+        className={`hidden ipad:grid ${
+          width < 1440 ? "tablet:grid-cols-4 " : "desktop:grid-cols-7 "
+        }`}
+      >
+        <div
+          className={`hidden tablet:inline ${
+            width < 1440 ? "tablet:col-span-1" : "desktop:col-span-3"
+          }`}
+        />
+        <div
+          className={` ${
+            width < 1440 ? "tablet:col-span-3" : "desktop:col-span-4"
+          }`}
+        >
+          <div className="flex gap-8 justify-start relative tablet:max-w-47.25">
+            {DESCRIPTIONS.map((item, i) => (
               <button
                 key={i}
                 onClick={() => setDescription(i)}
@@ -63,31 +60,26 @@ function DescriptionSection() {
                     width: `${position.width}rem`,
                     left: `${position.left}rem`,
                   }}
-                  className={`absolute top-[100%] h-[.15rem] inline-block bg-purple transition-all duration-150 ease-in-out`}
+                  className={`absolute top-full h-0.15 inline-block bg-purple transition-all duration-150 ease-in-out`}
                 />
               </button>
             ))}
           </div>
-          <div className="my-6 relative ">
+          <div className="my-6 relative">
             <div>
-              {desc[description].description}
-              <span className="ipad:inline-block underline hover:no-underline hover:duration-300 ease-in-out desktop:collapse">
+              {DESCRIPTIONS[description].description}
+              <span className="ipad:inline-block underline hover:no-underline hover:duration-300 ease-in-out desktop:hidden">
                 <Button style="hover:no-underline">Learn more</Button>
               </span>
             </div>
-            <div className="hidden desktop:block">
-              <Button style=" underline group-hover:no-underline group-hover:duration-300 ease-in-out">
-                Learn
-              </Button>
-            </div>
 
-            <p className="my-6">{desc[description].end}</p>
+            <p className="my-6">{DESCRIPTIONS[description].end}</p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col ipad:hidden gap-4 justify-start w-full ">
-        {desc.map((item, i) => (
-          <div key={i} className="">
+      <div className="flex flex-col ipad:hidden gap-4 justify-start w-full">
+        {DESCRIPTIONS.map((item, i) => (
+          <div key={i}>
             <button
               onClick={() => {
                 setDescription(i);
@@ -108,7 +100,7 @@ function DescriptionSection() {
                   description === i && show && "rotate-180 "
                 } duration-500 ease-in-out`}
               >
-                <Arrow />
+                <Arrow styles={`rotate-180`} />
               </div>
             </button>
             {description === i && show && (
@@ -128,6 +120,6 @@ function DescriptionSection() {
       </div>
     </Wrapper>
   );
-}
+};
 
 export default DescriptionSection;
