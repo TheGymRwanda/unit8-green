@@ -11,7 +11,7 @@ const Header = () => {
           Ape Unit
         </h1>
         <div className="hidden ipad:block">
-          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:w-757 tablet:-tracking-thin">
+          <h2 className="font-normal text-2xl ipad:pt-0 desktop:min-w-806 tablet:max-w-[45.5rem] tablet:-tracking-thin">
             Unit➇ is a pioneering technology company specialing in decentralised
             technologies that creates end-to-end digital experiences for
             protocols including{" "}
@@ -38,7 +38,7 @@ const Header = () => {
           </h2>
         </div>
         <div className="block ipad:hidden">
-          <h2 className="font-normal text-xl">
+          <h2 className="font-normal text-xl leading-7 -tracking-thiner">
             Unit➇ is a pioneering technology and marketing services company that
             creates end-to-end digital experiences for brands such as{" "}
             <span className="text-purple">
@@ -47,7 +47,7 @@ const Header = () => {
             and more. Its team of 2,500+ digital specialists across 30+
             locations on 5 continents delivers pioneering work on a global scale
             with a boutique culture.
-            <span className="inline-block">
+            <span className="inline-block text-xl leading-7 -tracking-thiner">
             <Link href={"mailto:web3@apeunit.com"} target="_blank">
                 <div className="flex gap-1 items-center group cursor-pointer">
                   <span
