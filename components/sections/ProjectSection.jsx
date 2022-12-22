@@ -19,8 +19,8 @@ const ProjectSections = () => {
         Project
       </p>
 
-      <div className="hidden desktop:grid desktop:grid-cols-5 relative mt-2.25">
-        <ul className="flex flex-col text-7.5xl cursor-pointer col-span-2 -space-y-5 leading-snug">
+      <div className="hidden desktop:grid desktop:grid-cols-9 relative mt-2.25">
+        <ul className="flex flex-col text-7.5xl cursor-pointer col-span-4 -space-y-5 leading-snug">
           {IMAGES.map(
             (item, i) =>
               i !== 0 && (
@@ -54,7 +54,7 @@ const ProjectSections = () => {
           )}
         </ul>
         {link !== 0 && (
-          <div className="sticky h-fit top-4 mt-10 col-span-3">
+          <div className="sticky h-fit top-4 mt-10 col-span-5">
             <Image
               className="rounded-xl shadow-pictures desktop:inline-block max-w-full max-h-full"
               src={IMAGES[link].src}

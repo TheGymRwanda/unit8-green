@@ -51,6 +51,7 @@ module.exports = {
         "90%": "90%",
         "6.5xl": "76.3125rem",
         90: "90rem",
+        65.2: "65.25rem",
       },
       maxHeight: {
         25: "25.086875rem",
@@ -61,6 +62,7 @@ module.exports = {
         47.4: "47.4769rem",
         21.8: "21.8125rem",
       },
+
       minHeight: {
         25: "25.086875rem",
         26: "25.625rem",
@@ -111,6 +113,7 @@ module.exports = {
       },
       gap: {
         13: "3.875rem",
+        25: "6.3125rem",
         81: "20.75rem",
         98: "25.75rem",
         25: "6.3125rem",
@@ -119,11 +122,11 @@ module.exports = {
         k: "15.625rem_minmax(0,_1fr)",
       },
       width: {
-        70: "16.0625rem",
-        78: "19.375rem",
+        22: "5.875rem",
         90: "90rem",
+        78: "19.375rem",
+        757: "47.3125rem",
       },
-      
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

@@ -7,6 +7,10 @@ const Wrapper = ({ children, styles }) => {
     setWidth(innerWidth);
   };
   useEffect(() => {
+    window.addEventListener("load", updateWidth);
+    return () => window.removeEventListener("load", updateWidth);
+  }, []);
+  useEffect(() => {
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);

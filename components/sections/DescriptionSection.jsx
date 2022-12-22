@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
 import Arrow from "../Arrow";
 import Button from "../ui/Button";
@@ -20,7 +20,11 @@ const DescriptionSection = () => {
   const updateWidth = () => {
     setWidth(innerWidth);
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
+    window.addEventListener("load", updateWidth, false);
+    return () => window.removeEventListener("load", updateWidth);
+  });
+  useLayoutEffect(() => {
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
@@ -29,17 +33,17 @@ const DescriptionSection = () => {
     <Wrapper styles="font-normal desktop:text-2xl ipad:text-2xl text-xl desktop:mt-24 desktop:mb-18 tablet:mt-14 tablet:mb-14 ipad:mt-15 mt-20 -tracking-thiner">
       <div
         className={`hidden ipad:grid ${
-          width < 1440 ? "tablet:grid-cols-4 " : "desktop:grid-cols-7 "
+          width < 1440 ? "tablet:grid-cols-9 " : "desktop:grid-cols-9"
         }`}
       >
         <div
           className={`hidden tablet:inline ${
-            width < 1440 ? "tablet:col-span-1" : "desktop:col-span-3"
+            width < 1440 ? "tablet:col-span-2" : "desktop:col-span-4"
           }`}
         />
         <div
           className={` ${
-            width < 1440 ? "tablet:col-span-3" : "desktop:col-span-4"
+            width < 1440 ? "tablet:col-span-7" : "desktop:col-span-5"
           }`}
         >
           <div className="flex gap-8 justify-start relative tablet:max-w-47.25">
