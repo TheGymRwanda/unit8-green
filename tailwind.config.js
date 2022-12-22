@@ -90,6 +90,7 @@ module.exports = {
         k: "15.625rem_minmax(0,_1fr)",
       },
       width: {
+        70: "16.0625rem",
         78: "19.375rem",
       },
       maxWidth: {
