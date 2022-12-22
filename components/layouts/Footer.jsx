@@ -3,10 +3,10 @@ import Wrapper from "../wrappers/Wrapper";
 import Button from "../../components/ui/Button";
 import Link from "next/link";
 
-function Footer() {
+const Footer = () => {
   return (
-    <Wrapper className={"mt-[8.4375rem] "}>
-      <div className="flex flex-col ipad:flex-row justify-between gap-y-12 ipad:gap-y-0 text-xl ipad:text-2xl font-normal leading-8 tracking-thiner ipad:tracking-thin ipad:pb-12 pb-5 tablet:pb-14 desktop:pb-12">
+    <Wrapper>
+      <div className="mt-32 max-w-6.5xl flex flex-col ipad:flex-row justify-between gap-y-12 ipad:gap-y-0 text-xl ipad:text-2xl font-normal leading-7 ipad:leading-8 tracking-thiner ipad:tracking-thin pb-12">
         <p className="flex flex-col">
           <span>Ape Unit GmbH</span>
           <span className="w-56">Waldemarstraße 38, 10999 Berlin </span>
@@ -27,8 +27,8 @@ function Footer() {
             <Link href={"https://apeunit.com/impressum.txt"} target="_blank">
               Impressum
             </Link>
-          </span>{" "}
-          /{" "}
+          </span>
+          <span> / </span>
           <span>
             <Link href={"https://apeunit.com/datenschutz.txt"} target="_blank">
               Privacy
@@ -38,6 +38,6 @@ function Footer() {
       </div>
     </Wrapper>
   );
-}
+};
 
 export default Footer;

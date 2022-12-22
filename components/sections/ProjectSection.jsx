@@ -1,9 +1,8 @@
 import React, { useLayoutEffect, useState } from "react";
+import Link from "next/link";
+import IMAGES from "../../data/projectImagesData";
 import Image from "next/image";
 import Wrapper from "../wrappers/Wrapper";
-import arrow from "../../public/assets/images/arrow.svg";
-import IMAGES from "../../data/projectImagesData";
-import Link from "next/link";
 
 const ProjectSections = () => {
   const [link, setLink] = useState(0);
@@ -44,7 +43,9 @@ const ProjectSections = () => {
                     </Link>
                     <Image
                       alt="arrow"
-                      src={arrow}
+                      src="/assets/images/arrow.svg"
+                      width={15}
+                      height={15}
                       className="absolute top-5 hidden group-hover:inline-block duration-100 -right-0"
                     />
                   </div>
