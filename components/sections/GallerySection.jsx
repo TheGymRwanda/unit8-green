@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef } from "react";
 import Wrapper from "../wrappers/Wrapper";
 import IMAGES from "../../data/galleryImages.js";
 
