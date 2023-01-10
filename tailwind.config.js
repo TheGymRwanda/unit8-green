@@ -22,11 +22,11 @@ module.exports = {
         },
       },
       screens: {
-        large: "100rem",
-        desktop: "90rem",
-        tablet: "64rem",
-        ipad: "52.125rem",
-        mobile: "24.375rem",
+        large: "80rem",
+        desktop: "64rem",
+        tablet: "48rem",
+        ipad: "40rem",
+        mobile: "0rem",
       },
 
       colors: {
