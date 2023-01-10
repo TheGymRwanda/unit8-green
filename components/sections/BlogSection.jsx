@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Card from "../ui/Card";
 import BLOGS from "../../data/blogs";
@@ -12,6 +12,18 @@ const BlogSection = () => {
   const prevPosition = useRef(0);
   const [blogs, setBlogs] = useState(BLOGS);
   const [position, setPosition] = useState(0);
+  const [width, setWidth] = useState(null);
+  const updateWidth = () => {
+    setWidth(innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("load", updateWidth);
+    return () => window.removeEventListener("load", updateWidth);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
   const generateInfinite = (e) => {
     setPosition(() => e.target.scrollLeft);
     if (position - prevPosition.current >= 302) {
@@ -31,8 +43,12 @@ const BlogSection = () => {
     }
   };
   return (
-    <div className="mb-34 ipad:mb-35 desktop:mb-33 large:mb-29 ">
-      <div className="flex gap-8 w-90 max-w-90% mx-auto mb-8">
+    <div
+      className={`mb-34 ipad:mb-35 desktop:mb-33 large:mb-29 pl-5 w-full relative ${
+        width < 1440 ? "ipad:pl-9 tablet:pl-12" : "desktop:pl-28"
+      }`}
+    >
+      <div className={`max-w-90 pl-3 flex gap-8 mb-8 mx-auto w-full relative`}>
         <h1 className="text-xl font-medium text-gray-400">Blog</h1>
         <div className="hidden desktop:flex w-16 justify-between">
           <button
@@ -58,15 +74,13 @@ const BlogSection = () => {
       <div
         ref={blogSect}
         onScroll={generateInfinite}
-        className="w-full overflow-x-auto scrollbar-hide smooth-scroll ease-in-out duration-300"
+        className="overflow-x-auto scrollbar-hide smooth-scroll ease-in-out duration-300"
       >
-        <div className="flex gap-6  mx-auto w-90 max-w-90%">
-          <div>
-            <div className="inline-flex gap-8 py-5">
-              {blogs.map((blog, index) => (
-                <Card key={index} {...blog} />
-              ))}
-            </div>
+        <div className="flex gap-6 mx-auto w-90">
+          <div className="inline-flex gap-8 py-5">
+            {blogs.map((blog, index) => (
+              <Card key={index} {...blog} />
+            ))}
           </div>
         </div>
       </div>
